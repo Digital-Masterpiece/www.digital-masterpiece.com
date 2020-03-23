@@ -1,5 +1,9 @@
 @import "dm-framework.min.scss";
 
+* {
+  max-width: 100vw;
+}
+
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -15,24 +19,63 @@
 }
 
 html {
-  font-family: "Inter", sans-serif;
-  background: url("https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg")
-    center center;
+  font-family: "Quicksand", sans-serif;
+  background: url("/images/laptop.jpg") center center;
   background-size: cover;
-  background-blend-mode: overlay;
+
+  @media (min-width: 1921px & min-height 1081px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 2561px & min-height 1081px) {
+    font-size: 32px;
+  }
+}
+
+body {
+  width: 100%;
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
 }
 
 .header {
-  font-weight: 300;
+  font-weight: 400;
 
   &--link {
     display: inline-block;
     padding: 0.5rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      text-decoration: underline;
+    }
   }
 }
 
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  font-weight: 300;
+  font-size: 75%;
+  text-align: center;
+}
+
+.tagline {
+  font-weight: 400;
+}
+
 .hero {
-  margin: 4rem;
+  margin: 2rem;
   flex-grow: 1;
 
   &--callout {
@@ -40,25 +83,31 @@ html {
     text-align: center;
 
     &--subtext {
-      font-weight: 200;
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+      font-weight: 300;
       margin-bottom: 0.25em;
       @media (min-width: 32rem) {
-        font-size: 150%;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
       }
     }
 
     &--headline {
-      font-weight: 300;
-      font-size: 150%;
+      height: 10rem;
+      font-weight: 400;
+      font-size: 2.5rem;
+      line-height: 3rem;
       @media (min-width: 32rem) {
-        font-size: 200%;
+        font-size: 4rem;
+        line-height: 5rem;
       }
     }
   }
 
   .button {
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0.5rem;
   }
 }

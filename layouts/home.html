@@ -3,20 +3,60 @@
 
 <div class="hero vertical centered container shadowed-text">
   <h2 class="hero--callout vertical centered container">
-    <div class="hero--callout--subtext">Create Your</div>
-    <div class="hero--callout--headline">Digital Masterpiece</div>
+    <div class="hero--callout--subtext">Envision Your</div>
+    <div id="service-offered" class="hero--callout--headline centered container">
+      <noscript>Digital Masterpiece</noscript>
+    </div>
   </h2>
+  <h3 class="tagline">We make it easy.</h3>
   <div class="centered wrapping container">
-    <a
-      href="https://google.com"
-      class="big green shadowed glowing button"
-      >Learn More</a
-    >
-    <a
-      href="https://google.com"
-      class="big blue shadowed glowing button"
-      >Request a Quote</a
-    >
+    <a href="/about" class="big blue shadowed glowing button">Learn More</a>
+    <a href="/quote" class="big green shadowed glowing button">Get a Quote</a>
   </div>
 </div>
+
+<script>
+  const serviceText = document.getElementById("service-offered");
+
+  window.onload = () => {
+    let interval = 0;
+    const intervalIncrement = 3000;
+    const services = [
+      "Marketing Website",
+      "Custom Web Application",
+      "Business Branding",
+      "Digital Masterpiece"
+    ];
+
+    services.forEach(service => {
+      setTimeout(() => {
+        serviceText.innerText = "";
+        const letters = service.split("");
+        let letterInterval = 0;
+        const letterIntervalIncrement = intervalIncrement / letters.length / 4;
+
+        letters.forEach(letter => {
+          setTimeout(() => {
+            serviceText.textContent += letter;
+          }, letterInterval);
+          letterInterval += letterIntervalIncrement;
+        });
+
+        letterInterval += intervalIncrement / 2;
+
+        // If this isn't the last service, "backspace" the letters.
+        if (!(service === services[services.length - 1])) {
+          letters.forEach(letter => {
+            setTimeout(() => {
+              serviceText.textContent = serviceText.textContent.slice(0, -1);
+            }, letterInterval);
+            letterInterval += letterIntervalIncrement;
+          });
+        }
+      }, interval);
+
+      interval += intervalIncrement;
+    });
+  };
+</script>
 {{ end }}
