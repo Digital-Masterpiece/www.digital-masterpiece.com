@@ -35,8 +35,12 @@ html {
 body {
   width: 100%;
   flex-grow: 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
+
+  @media (min-width: 32rem) {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .header,
@@ -58,6 +62,14 @@ body {
       text-decoration: underline;
     }
   }
+
+  &--branding {
+    margin-right: 3rem;
+  }
+
+  &--logo {
+    height: 1.375rem;
+  }
 }
 
 .main {
@@ -75,7 +87,6 @@ body {
 }
 
 .hero {
-  margin: 2rem;
   flex-grow: 1;
 
   &--callout {

@@ -1,11 +1,20 @@
-<header class="header centered container">
-    <a href="/" class="white-text header--link">Digital Masterpiece</a>
+<header class="header">
+    <div class="centered container">
+        <a href="/" class="header--branding white-text header--link">
+            {{ $logo := resources.Get "images/logo.svg" | resources.Fingerprint }}
+            <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece LLC. Logo" class="header--logo" />
+        </a>
+    
+        <nav aria-label="Primary" class="header--navigation">
+            <a href="/about" class="white-text header--link">About</a>
+            <a href="/services" class="white-text header--link">Services</a>
+            <a href="/clients" class="white-text header--link">Clients</a>
+            <a href="/pricing" class="white-text header--link">Pricing</a>
+            <a href="/contact" class="white-text header--link">Contact Us</a>
+        </nav>
+    </div>
 
-    <nav aria-label="Primary" class="header--navigation">
-        <a href="/about" class="white-text header--link">About</a>
-        <a href="/clients" class="white-text header--link">Clients</a>
-        <a href="/pricing" class="white-text header--link">Pricing</a>
-        <a href="/quote" class="white-text header--link">Get a Quote</a>
-        <a href="/contact" class="white-text header--link">Contact Us</a>
-    </nav>
+    <div class="centered container">
+        <a href="/quote" class="violet shadowed glowing button">Request a Quote</a>
+    </div>
 </header>
