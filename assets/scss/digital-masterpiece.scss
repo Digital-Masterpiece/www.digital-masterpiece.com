@@ -87,8 +87,6 @@ body {
 }
 
 .hero {
-  flex-grow: 1;
-
   &--callout {
     padding: 1rem;
     text-align: center;
@@ -118,7 +116,6 @@ body {
 
   .button {
     text-align: center;
-    font-weight: 400;
     margin: 0.5rem;
   }
 }

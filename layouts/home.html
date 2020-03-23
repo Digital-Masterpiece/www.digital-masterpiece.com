@@ -2,15 +2,27 @@
 <h1 class="sr-only">Home</h1>
 
 <div class="hero vertical centered container shadowed-text">
-  <h2 class="hero--callout vertical centered container">
+  {{/*  Dynamic text will be hidden for screen readers.  */}}
+  <h2 class="hero--callout vertical centered container" aria-hidden="true">
     <div class="hero--callout--subtext">Envision Your</div>
-    <div id="service-offered" class="hero--callout--headline centered container">
+    <div
+      id="service-offered"
+      class="hero--callout--headline centered container"
+    >
       <noscript>Digital Masterpiece</noscript>
     </div>
   </h2>
-  <h3 class="tagline">We make it easy.</h3>
+  <h2 class="sr-only">Envision Your Digital Masterpiece</h2>
+
+  <h3 class="tagline">We make it real.</h3>
   <div class="centered wrapping container">
-    <a href="/about" class="big blue shadowed glowing button">Learn More</a>
+    <a href="/about" class="big blue shadowed glowing button">
+      <span>Learn More</span>
+      <span class="sr-only"
+        >Learn more about Digital Masterpiece LLC and the services we
+        provide.</span
+      >
+    </a>
     <a href="/pricing" class="big green shadowed glowing button">Pricing</a>
   </div>
 </div>
