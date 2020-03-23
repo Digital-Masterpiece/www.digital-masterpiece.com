@@ -1,0 +1,64 @@
+@import "dm-framework.min.scss";
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  background: url("https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg")
+    center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.header {
+  font-weight: 300;
+
+  &--link {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+}
+
+.hero {
+  margin: 4rem;
+  flex-grow: 1;
+
+  &--callout {
+    padding: 1rem;
+    text-align: center;
+
+    &--subtext {
+      font-weight: 200;
+      margin-bottom: 0.25em;
+      @media (min-width: 32rem) {
+        font-size: 150%;
+      }
+    }
+
+    &--headline {
+      font-weight: 300;
+      font-size: 150%;
+      @media (min-width: 32rem) {
+        font-size: 200%;
+      }
+    }
+  }
+
+  .button {
+    text-align: center;
+    font-weight: 300;
+    margin: 0.5rem;
+  }
+}

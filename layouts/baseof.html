@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" class="darkgray">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Digital Masterpiece LLC." />
+    <meta name="description" content="{{ .Description | plainify }}" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    {{ $css := resources.Get "scss/digital-masterpiece.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+  </head>
+
+  <body>
+    {{ partial "header.html" . }}
+
+    <main id="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>
