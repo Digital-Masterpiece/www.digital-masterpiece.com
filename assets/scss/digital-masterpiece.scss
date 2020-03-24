@@ -82,10 +82,6 @@ body {
 
   &--logo {
     height: 1.5rem;
-
-    @media (min-width: 64rem) {
-      height: 1.75rem;
-    }
   }
 
   &--navigation {
@@ -106,7 +102,7 @@ body {
 
     @media (min-width: 64rem) {
       position: initial;
-      font-size: 125%;
+      font-size: 112.5%;
       display: initial;
       background-color: initial;
       padding: initial;
