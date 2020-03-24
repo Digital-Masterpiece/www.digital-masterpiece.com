@@ -51,11 +51,13 @@
           setTimeout(() => {
             serviceText.textContent = serviceText.textContent.replace("|", "");
             serviceText.textContent += letter + "|";
-
-            if (index === letters.length - 1) {
-              serviceText.textContent = serviceText.textContent.slice(0, -1);
-            }
           }, letterInterval);
+
+          if (index === letters.length - 1) {
+            setTimeout(() => {
+              serviceText.textContent = serviceText.textContent.slice(0, -1);
+            }, letterInterval + 1);
+          }
           letterInterval += letterIntervalIncrement;
         });
 
