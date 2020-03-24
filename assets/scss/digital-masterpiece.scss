@@ -67,7 +67,7 @@ body {
       text-decoration: underline;
     }
 
-    @media (min-width: 48rem) {
+    @media (min-width: 64rem) {
       padding: 0.5rem;
     }
   }
@@ -75,7 +75,7 @@ body {
   &--branding {
     margin-right: auto;
 
-    @media (min-width: 48rem) {
+    @media (min-width: 64rem) {
       margin-right: 4rem;
     }
   }
@@ -83,7 +83,7 @@ body {
   &--logo {
     height: 1.5rem;
 
-    @media (min-width: 48rem) {
+    @media (min-width: 64rem) {
       height: 1.75rem;
     }
   }
@@ -104,7 +104,7 @@ body {
     z-index: 10;
     padding-top: 1rem;
 
-    @media (min-width: 48rem) {
+    @media (min-width: 64rem) {
       position: initial;
       font-size: 125%;
       display: initial;
@@ -197,7 +197,7 @@ body {
   margin-right: 0.75rem;
   outline: 0;
 
-  @media (min-width: 48rem) {
+  @media (min-width: 64rem) {
     display: none;
   }
 
@@ -220,4 +220,10 @@ body {
       top: 1.375rem;
     }
   }
+}
+
+.copyright {
+  padding: 0.5rem 0.75rem;
+  border-radius: 5rem;
+  background-color: rgba(0, 0, 0, 0.75);
 }
