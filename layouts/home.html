@@ -2,7 +2,7 @@
 <h1 class="sr-only">Home</h1>
 
 <div class="hero vertical centered container shadowed-text">
-  {{/*  Dynamic text will be hidden for screen readers.  */}}
+  {{/* Dynamic text will be hidden for screen readers. */}}
   <h2 class="hero--callout vertical centered container" aria-hidden="true">
     <div class="hero--callout--subtext">Envision Your</div>
     <div
@@ -14,7 +14,7 @@
   </h2>
   <h2 class="sr-only">Envision Your Digital Masterpiece</h2>
 
-  <h3 class="tagline">We make it real.</h3>
+  <h3 class="tagline">Let's make it real.</h3>
   <div class="centered wrapping container">
     <a href="/about" class="big blue shadowed glowing button">
       <span>Learn More</span>
@@ -32,7 +32,7 @@
 
   window.onload = () => {
     let interval = 0;
-    const intervalIncrement = 2000;
+    const intervalIncrement = 2500;
     const services = [
       "Website",
       "Online Application",
@@ -47,9 +47,14 @@
         let letterInterval = 0;
         const letterIntervalIncrement = intervalIncrement / letters.length / 4;
 
-        letters.forEach(letter => {
+        letters.forEach((letter, index) => {
           setTimeout(() => {
-            serviceText.textContent += letter;
+            serviceText.textContent = serviceText.textContent.replace("|", "");
+            serviceText.textContent += letter + "|";
+
+            if (index === letters.length - 1) {
+              serviceText.textContent = serviceText.textContent.slice(0, -1);
+            }
           }, letterInterval);
           letterInterval += letterIntervalIncrement;
         });
@@ -60,7 +65,8 @@
         if (!(service === services[services.length - 1])) {
           letters.forEach(letter => {
             setTimeout(() => {
-              serviceText.textContent = serviceText.textContent.slice(0, -1);
+              serviceText.textContent =
+                serviceText.textContent.slice(0, -2) + "|";
             }, letterInterval);
             letterInterval += letterIntervalIncrement;
           });
