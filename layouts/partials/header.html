@@ -5,8 +5,15 @@
             {{ $logo := resources.Get "images/logo.svg" | resources.Fingerprint }}
             <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece LLC. Logo" class="header--logo" />
         </a>
+
+        <input type="checkbox" id="mobile-navigation" class="sr-only" aria-hidden="true" />
+        <label for="mobile-navigation" class="mobile-navigation-label white shadowed glowing button" tabindex="0" aria-hidden="true">
+            <span class="transitioned hamburger"></span>
+            <span class="transitioned hamburger"></span>
+            <span class="transitioned hamburger"></span>
+        </label>
     
-        <nav aria-label="Primary" class="header--navigation">
+        <nav aria-label="Primary" class="header--navigation transitioned">
             <a href="/about" class="white-text header--link">About</a>
             <a href="/services" class="white-text header--link">Services</a>
             <a href="/clients" class="white-text header--link">Clients</a>
