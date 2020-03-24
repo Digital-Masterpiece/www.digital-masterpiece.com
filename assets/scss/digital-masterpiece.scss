@@ -35,12 +35,7 @@ html {
 body {
   width: 100%;
   flex-grow: 1;
-  background-color: rgba(0, 0, 0, 0.8);
   color: white;
-
-  @media (min-width: 32rem) {
-    background-color: transparent;
-  }
 }
 
 .header,
@@ -53,7 +48,7 @@ body {
   width: 100%;
 
   &--container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   &--link {
@@ -96,7 +91,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     font-size: 150%;
-    background-color: rgba(0, 0, 0, 0.975);
+    background-color: rgba(0, 0, 0, 0.95);
     z-index: 10;
     padding-top: 1rem;
 
@@ -222,4 +217,49 @@ body {
   padding: 0.5rem 0.75rem;
   border-radius: 5rem;
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+.content {
+  text-align: center;
+  line-height: 150%;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 1rem;
+
+  @media (min-width: 48rem) {
+    border-radius: 0.5rem;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    line-height: 125%;
+  }
+
+  h2 {
+    margin: 2rem 0 1rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  ul,
+  ol {
+    text-align: left;
+    margin: 0 1.5rem;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin: 0.5rem 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
