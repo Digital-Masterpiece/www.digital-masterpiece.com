@@ -39,7 +39,7 @@ body {
   color: white;
 
   @media (min-width: 32rem) {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
   }
 }
 
@@ -51,6 +51,10 @@ body {
 .header {
   font-weight: 400;
   width: 100%;
+
+  &--container {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
   &--link {
     display: inline-block;

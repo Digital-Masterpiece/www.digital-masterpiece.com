@@ -1,13 +1,17 @@
 <header class="header">
     <a href="#main" class="sr-only">Skip to main content.</a>
-    <div class="centered container">
+    <div class="header--container centered container">
         <a href="/" class="header--branding white-text header--link">
             {{ $logo := resources.Get "images/logo.svg" | resources.Fingerprint }}
             <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece LLC. Logo" class="header--logo" />
         </a>
 
         <input type="checkbox" id="mobile-navigation" class="sr-only" aria-hidden="true" />
-        <label for="mobile-navigation" class="mobile-navigation-label white shadowed glowing button" tabindex="0" aria-hidden="true">
+        <label for="mobile-navigation"
+        class="mobile-navigation-label white shadowed glowing button"
+        onclick="lockScrolling()"
+        tabindex="0"
+        aria-hidden="true">
             <span class="transitioned hamburger"></span>
             <span class="transitioned hamburger"></span>
             <span class="transitioned hamburger"></span>
@@ -25,4 +29,16 @@
     <div class="centered container">
         <a href="/quote" class="violet shadowed glowing button">Request a Quote</a>
     </div>
+
+    <script>
+        function lockScrolling() {
+            if(document.getElementById("mobile-navigation").checked) {
+                document.body.style.overflow = "auto";
+            } else {
+                // Scroll back to the top of the page and disable scrolling.
+                window.scrollTo(0,0);
+                document.body.style.overflow = "hidden";
+            }
+        }
+    </script>
 </header>
