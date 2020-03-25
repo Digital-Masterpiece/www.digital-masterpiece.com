@@ -1,6 +1,6 @@
 <header class="header">
     <a href="#main" class="sr-only">Skip to main content.</a>
-    <div class="header--container black shadowed centered container">
+    <div class="header--container centered container">
         <a href="/" class="header--branding white-text header--link">
             {{ $logo := resources.Get "images/logo.svg" | resources.Fingerprint }}
             <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece LLC. Logo" class="header--logo" />
@@ -17,16 +17,13 @@
             <span class="transitioned hamburger"></span>
         </label>
     
-        <nav aria-label="Primary" class="header--navigation black transitioned">
+        <nav aria-label="Primary" class="header--navigation transitioned">
             <a href="/about" class="white-text header--link">About</a>
             <a href="/services" class="white-text header--link">Services & Pricing</a>
             <a href="/clients" class="white-text header--link">Clients</a>
+            <a href="/quote" class="white-text header--link">Request a Quote</a>
             <a href="/contact" class="white-text header--link">Contact</a>
         </nav>
-    </div>
-
-    <div class="centered container">
-        <a href="/quote" class="violet shadowed glowing button">Request a Quote</a>
     </div>
 
     <script>
