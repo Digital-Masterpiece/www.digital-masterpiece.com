@@ -2,8 +2,9 @@
     <a href="#main" class="sr-only">Skip to main content.</a>
     <div class="header--container centered container">
         <a href="/" class="header--branding white-text header--link">
-            {{ $logo := resources.Get "images/logo.svg" | resources.Fingerprint }}
+            {{ $logo := resources.Get "images/favicon.svg" | resources.Fingerprint }}
             <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece LLC. Logo" class="header--logo" />
+            <span>Digital Masterpiece</span>
         </a>
 
         <input type="checkbox" id="mobile-navigation" class="sr-only" aria-hidden="true" />

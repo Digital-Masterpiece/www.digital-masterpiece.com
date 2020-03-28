@@ -11,6 +11,9 @@
     
     <title>{{ .Title }} - {{ .Site.Title }}</title>
 
+    {{ $favicon := resources.Get "images/favicon.png" | resources.Fingerprint }}
+    <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -28,5 +31,6 @@
     </main>
 
     {{ partial "footer.html" . }}
+    <section id="stars" aria-hidden="true"></section>
   </body>
 </html>
