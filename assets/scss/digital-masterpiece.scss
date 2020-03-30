@@ -20,7 +20,7 @@
 
 html {
   font-family: "Quicksand", sans-serif;
-  
+
   @media (min-width: 1921px) {
     font-size: 24px;
   }
@@ -34,7 +34,7 @@ body {
   width: 100%;
   flex-grow: 1;
   color: white;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), black) fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black) fixed;
 }
 
 .header,
@@ -258,11 +258,32 @@ body {
     list-style: decimal;
   }
 
+  ul {
+    list-style: disc;
+  }
+
   li {
     margin: 0.5rem 0;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: #a9c5fb;
+
+    &:hover,
+    &:focus {
+      color: #e1ebfe;
+    }
+
+    &:focus {
+      outline: 0.0625rem solid #e1ebfe;
+    }
+
+    &:visited {
+      color: #b6a9fb;
     }
   }
 }
