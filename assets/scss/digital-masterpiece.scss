@@ -283,8 +283,14 @@ body {
     }
 
     &:visited {
-      color: #b6a9fb;
+      color: #b7fba9;
     }
+  }
+}
+
+.services {
+  .button {
+    margin: 0.75rem;
   }
 }
 
