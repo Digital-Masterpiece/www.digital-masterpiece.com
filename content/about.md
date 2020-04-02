@@ -9,12 +9,14 @@ draft: false
 
 We are a remote Web Development company in the United States that specializes in custom website and web application development.
 
+{{< services-buttons >}}
+
 ### Tenets
 
 1. Follow the Agile Development Lifecycle.
 2. Have a clear requirement of the Minimum Viable Product.
 3. Set reasonable timelines for all parties.
-4. Deploy serverless.
+4. Develop in type-safe, multi-threaded languages.
 5. Write scalable and re-usable code.
 6. Automate testing whenever possible.
-7. Develop in type-safe, multi-threaded languages.
+7. Deploy serverless.

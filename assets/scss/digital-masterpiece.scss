@@ -231,7 +231,7 @@ body {
     margin-bottom: 0;
   }
 
-  h1 {
+  h1, h2, h3 {
     line-height: 125%;
   }
 
@@ -271,19 +271,19 @@ body {
   }
 
   a {
-    color: #a9c5fb;
+    color: #f5fba9;
 
     &:hover,
     &:focus {
-      color: #e1ebfe;
+      color: #fcffd1;
     }
 
     &:focus {
-      outline: 0.0625rem solid #e1ebfe;
+      outline: 0.0625rem solid #fcffd1;
     }
 
     &:visited {
-      color: #b7fba9;
+      color: #d9c8ff;
     }
   }
 }
