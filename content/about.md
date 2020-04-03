@@ -19,4 +19,4 @@ We are a remote Web Development company in the United States that specializes in
 4. Develop in type-safe, multi-threaded languages.
 5. Write scalable and re-usable code.
 6. Automate testing whenever possible.
-7. Deploy serverless.
+7. Deploy serverless or containerized.
