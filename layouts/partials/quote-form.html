@@ -1,0 +1,48 @@
+<section aria-label="Quote Form" class="quote transitioned hidden">
+  <p class="quote--direct">Email us directly at:</p>
+  <a href="mailto:quote@digital-masterpiece.com?subject=Digital Masterpiece Quote Request" class="quote--email darkgray button shadowed glowing">quote@digital-masterpiece.com</a>
+  <p class="quote--or">or</p>
+  <form class="quote--form ended vertical container shadowed darkgray">
+    <div
+      role="button"
+      title="Close Quote Form"
+      class="quote--form--close transitioned interactive red"
+      tabindex="0"
+      onclick="hideQuoteForm()"
+    >
+      <span></span>
+      <span></span>
+    </div>
+    <div class="quote--form--field">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="white shadowed button" />
+    </div>
+    <div class="quote--form--field">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" class="white shadowed button" />
+    </div>
+    <div class="quote--form--field">
+      <label for="message">Message</label>
+      <textarea type="text" class="white shadowed button"></textarea>
+    </div>
+    <button type="submit" class="green shadowed-text glowing button">
+      Submit
+    </button>
+  </form>
+
+  <script>
+    const quote = document.querySelector(".quote");
+
+    const showQuoteForm = () => quote.classList.remove("hidden");
+    const hideQuoteForm = () => quote.classList.add("hidden");
+
+    window.addEventListener("click", event => {
+      if (
+        !event.target.closest(".quote--form") &&
+        event.target.textContent !== "Request a Quote"
+      ) {
+        hideQuoteForm();
+      }
+    });
+  </script>
+</section>
