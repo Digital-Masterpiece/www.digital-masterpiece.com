@@ -4,10 +4,10 @@ html {
 
 #stars {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -4rem;
+  right: -4rem;
+  bottom: -4rem;
+  left: -4rem;
   opacity: 0.5;
   width: 0.0625rem;
   height: 0.0625rem;
@@ -19,9 +19,9 @@ html {
   content: " ";
   position: fixed;
   top: 2000px;
-  right: 0;
-  bottom: 0px;
-  left: 0;
+  right: -4rem;
+  bottom: -4rem;
+  left: -4rem;
   width: 0.0625rem;
   height: 0.0625rem;
   background: transparent;
