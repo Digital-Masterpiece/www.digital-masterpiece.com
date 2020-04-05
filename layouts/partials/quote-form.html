@@ -1,8 +1,18 @@
 <section aria-label="Quote Form" class="quote transitioned hidden">
   <p class="quote--direct">Email us directly at:</p>
-  <a href="mailto:quote@digital-masterpiece.com?subject=Digital Masterpiece Quote Request" class="quote--email white button shadowed glowing">quote@digital-masterpiece.com</a>
+  <a
+    href="mailto:quote@digital-masterpiece.com?subject=Digital Masterpiece Quote Request"
+    class="quote--email white button shadowed glowing"
+    >quote@digital-masterpiece.com</a
+  >
   <p class="quote--or">or</p>
-  <form class="quote--form ended vertical container shadowed darkgray">
+  <form
+    id="contact-form"
+    class="quote--form ended vertical container shadowed darkgray"
+    method="POST"
+    action="http://localhost:8088"
+    onsubmit="submitForm(event)"
+  >
     <div
       role="button"
       title="Close Quote Form"
@@ -15,17 +25,26 @@
     </div>
     <div class="quote--form--field">
       <label for="name">Name</label>
-      <input type="text" id="name" class="white shadowed button" />
+      <input type="text" id="name" placeholder="John/Jane Doe" class="white shadowed button" required />
     </div>
     <div class="quote--form--field">
       <label for="email">Email Address</label>
-      <input type="email" id="email" class="white shadowed button" />
+      <input type="email" id="email" placeholder="user@domain.com" class="white shadowed button" required />
     </div>
     <div class="quote--form--field">
-      <label for="message">Message</label>
-      <textarea type="text" class="white shadowed button"></textarea>
+      <label for="message">Message (Optional)</label>
+      <textarea
+        type="text"
+        id="message"
+        class="white shadowed button"
+        placeholder="My business needs a website."
+      ></textarea>
     </div>
-    <button type="submit" class="green shadowed-text glowing button">
+    <button
+      type="submit"
+      id="submit-button"
+      class="green shadowed-text glowing button"
+    >
       Submit
     </button>
   </form>
@@ -44,5 +63,43 @@
         hideQuoteForm();
       }
     });
+
+    const submitForm = event => {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      let params = new URLSearchParams([
+        ["name", name],
+        ["email", email],
+        ["message", message]
+      ]);
+
+      if (name && email) {
+        const url =
+          document.getElementById("contact-form").action +
+          "?" +
+          params.toString();
+        fetch(url, {
+          method: "post"
+        })
+          .then(response => {
+            if (response.status === 200) {
+              document.getElementById("submit-button").textContent = "Sending!";
+              window.location.href = "/thank-you";
+            } else {
+              alert(
+                "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
+              );
+            }
+          })
+          .catch(error => {
+            alert(
+              "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
+            );
+            hideQuoteForm();
+          });
+      }
+    };
   </script>
 </section>
