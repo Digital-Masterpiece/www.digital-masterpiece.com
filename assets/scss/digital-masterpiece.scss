@@ -51,7 +51,7 @@ body {
     display: inline-block;
     padding: 1rem;
     text-decoration: none;
-    font-size: 112.5%;
+    font-size: 150%;
 
     &:hover,
     &:focus,
@@ -61,6 +61,7 @@ body {
 
     @media (min-width: 64rem) {
       padding: 0.5rem;
+      font-size: 112.5%;
     }
   }
 
@@ -69,6 +70,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-right: auto;
+    font-size: 112.5%;
 
     @media (min-width: 64rem) {
       margin-right: 4rem;

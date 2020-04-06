@@ -10,7 +10,7 @@
     id="contact-form"
     class="quote--form ended vertical container shadowed darkgray"
     method="POST"
-    action="http://localhost:8088"
+    action="https://contact.digital-masterpiece.com"
     onsubmit="submitForm(event)"
   >
     <div
@@ -25,11 +25,23 @@
     </div>
     <div class="quote--form--field">
       <label for="name">Name</label>
-      <input type="text" id="name" placeholder="John/Jane Doe" class="white shadowed button" required />
+      <input
+        type="text"
+        id="name"
+        placeholder="John/Jane Doe"
+        class="white shadowed button"
+        required
+      />
     </div>
     <div class="quote--form--field">
       <label for="email">Email Address</label>
-      <input type="email" id="email" placeholder="user@domain.com" class="white shadowed button" required />
+      <input
+        type="email"
+        id="email"
+        placeholder="user@domain.com"
+        class="white shadowed button"
+        required
+      />
     </div>
     <div class="quote--form--field">
       <label for="message">Message (Optional)</label>
@@ -55,7 +67,7 @@
     const showQuoteForm = () => quote.classList.remove("hidden");
     const hideQuoteForm = () => quote.classList.add("hidden");
 
-    window.addEventListener("click", event => {
+    window.addEventListener("click", (event) => {
       if (
         !event.target.closest(".quote--form") &&
         event.target.textContent !== "Request a Quote"
@@ -64,7 +76,7 @@
       }
     });
 
-    const submitForm = event => {
+    const submitForm = (event) => {
       event.preventDefault();
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
@@ -72,7 +84,7 @@
       let params = new URLSearchParams([
         ["name", name],
         ["email", email],
-        ["message", message]
+        ["message", message],
       ]);
 
       if (name && email) {
@@ -81,9 +93,9 @@
           "?" +
           params.toString();
         fetch(url, {
-          method: "post"
+          method: "post",
         })
-          .then(response => {
+          .then((response) => {
             if (response.status === 200) {
               document.getElementById("submit-button").textContent = "Sending!";
               window.location.href = "/thank-you";
@@ -93,7 +105,7 @@
               );
             }
           })
-          .catch(error => {
+          .catch((error) => {
             alert(
               "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
             );
