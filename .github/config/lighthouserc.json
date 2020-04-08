@@ -1,13 +1,12 @@
 {
   "ci": {
-    "serverBaseUrl": "http://localhost:1313",
-    "url": [
-      "http://localhost:1313/",
-      "http://localhost:1313/about/",
-      "http://localhost:1313/request-a-quote/",
-      "http://localhost:1313/thank-you/",
-      "http://localhost:1313/web-applications/",
-      "http://localhost:1313/websites/"
+    "urls": [
+      "http://localhost/",
+      "http://localhost/about/",
+      "http://localhost/request-a-quote/",
+      "http://localhost/thank-you/",
+      "http://localhost/web-applications/",
+      "http://localhost/websites/"
     ],
     "collect": {
       "staticDistDir": "./public"

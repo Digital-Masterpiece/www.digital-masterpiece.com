@@ -12,11 +12,9 @@ jobs:
           hugo-version: "0.68.3"
           extended: true
       - name: Build site
-        run: hugo --minify --baseUrl=http://localhost:1313
+        run: hugo
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v2
         with:
-          urls: ["http://localhost:1313/","http://localhost:1313/about/","http://localhost:1313/request-a-quote/","http://localhost:1313/thank-you/","http://localhost:1313/web-applications/","http://localhost:1313/websites/"]
+          configPath: "./.github/config/lighthouserc.json"
           temporaryPublicStorage: true
-          serverBaseUrl: http://localhost:1313
-          runs: 2
