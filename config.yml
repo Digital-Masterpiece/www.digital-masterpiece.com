@@ -1,3 +1,5 @@
 baseURL: "http://example.org/"
 languageCode: "en-us"
-title: "Digital Masterpiece LLC"
+title: "Digital Masterpiece"
+canonifyURLs: true
+disableKinds: ["taxonomy", "taxonomyTerm"]
