@@ -12,7 +12,7 @@ jobs:
           hugo-version: "0.68.3"
           extended: true
       - name: Build site
-        run: hugo --minify
+        run: hugo --minify --baseUrl http://localhost
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v2
         with:
