@@ -1,5 +1,13 @@
 {
   "ci": {
+    "url": [
+      "http://localhost/",
+      "http://localhost/about/",
+      "http://localhost/request-a-quote/",
+      "http://localhost/thank-you/",
+      "http://localhost/web-applications/",
+      "http://localhost/websites/"
+    ],
     "collect": {
       "staticDistDir": "./public"
     },
@@ -8,7 +16,7 @@
         "categories:performance": [
           "error",
           {
-            "minScore": 0.9
+            "minScore": 1
           }
         ],
         "categories:accessibility": [
@@ -20,7 +28,7 @@
         "categories:seo": [
           "error",
           {
-            "minScore": 0.9
+            "minScore": 1
           }
         ]
       }
