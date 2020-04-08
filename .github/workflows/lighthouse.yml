@@ -18,3 +18,10 @@ jobs:
         with:
           configPath: "./.github/config/lighthouserc.json"
           temporaryPublicStorage: true
+          urls: |
+            http://localhost:1313/
+            http://localhost:1313/about
+            http://localhost:1313/request-a-quote
+            http://localhost:1313/thank-you
+            http://localhost:1313/web-applications
+            http://localhost:1313/websites
