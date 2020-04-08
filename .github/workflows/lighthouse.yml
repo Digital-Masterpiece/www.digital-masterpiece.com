@@ -12,7 +12,7 @@ jobs:
           hugo-version: "0.68.3"
           extended: true
       - name: Build site
-        run: hugo --baseURL=http://localhost
+        run: hugo server --baseURL=http://localhost:1313 &
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v2
         with:
@@ -20,9 +20,9 @@ jobs:
           temporaryPublicStorage: true
           runs: 3
           urls: |
-            http://localhost/
-            http://localhost/about
-            http://localhost/request-a-quote
-            http://localhost/thank-you
-            http://localhost/web-applications
-            http://localhost/websites
+            http://localhost:1313/
+            http://localhost:1313/about
+            http://localhost:1313/request-a-quote
+            http://localhost:1313/thank-you
+            http://localhost:1313/web-applications
+            http://localhost:1313/websites
