@@ -1,4 +1,5 @@
 @import "dm-framework.min.scss";
+@import "dm-line";
 
 * {
   max-width: 100vw;
@@ -20,6 +21,7 @@
 
 html {
   font-family: "Quicksand", sans-serif;
+  background-image: url("/images/binding_dark.png");
 
   @media (min-width: 1921px) {
     font-size: 24px;
@@ -34,12 +36,22 @@ body {
   width: 100%;
   flex-grow: 1;
   color: white;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black) fixed;
+  background: radial-gradient(ellipse at top, rgba(#141519, 0.95), rgba(black, 0.8));
+}
+
+.button {
+  text-align: center;
 }
 
 .header,
 .footer {
   flex-shrink: 0;
+}
+
+.header,
+.footer,
+.content {
+  z-index: 1;
 }
 
 .header {
@@ -155,7 +167,6 @@ body {
   }
 
   .button {
-    text-align: center;
     margin: 0.5rem;
   }
 }
@@ -322,6 +333,10 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.9);
 
+  .button {
+    text-align: left;
+  }
+
   &.hidden {
     opacity: 0;
     pointer-events: none;
@@ -400,5 +415,3 @@ body {
     }
   }
 }
-
-@import "background";

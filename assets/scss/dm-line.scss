@@ -1,0 +1,94 @@
+.dm-line {
+  opacity: 0.125;
+  position: fixed;
+
+  &.horizontal {
+    width: 8rem;
+    height: 0.0625rem;
+  }
+
+  &.vertical {
+    height: 8rem;
+    width: 0.0625rem;
+  }
+
+  &.top {
+    top: -8rem;
+    background: linear-gradient(to bottom, transparent, white);
+    animation: topLine 1s linear;
+  }
+
+  &.right {
+    right: -8rem;
+    background: linear-gradient(to left, transparent, white);
+    animation: rightLine 1s linear;
+  }
+
+  &.bottom {
+    bottom: -8rem;
+    background: linear-gradient(to top, transparent, white);
+    animation: bottomLine 1s linear;
+  }
+
+  &.left {
+    left: -8rem;
+    background: linear-gradient(to right, transparent, white);
+    animation: leftLine 1s linear;
+  }
+}
+
+@keyframes topLine {
+  0% {
+    top: -8rem;
+  }
+  90% {
+    opacity: 0.125;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes rightLine {
+  0% {
+    right: -8rem;
+  }
+  90% {
+    opacity: 0.125;
+  }
+
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes bottomLine {
+  0% {
+    bottom: -8rem;
+  }
+  90% {
+    opacity: 0.125;
+  }
+
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes leftLine {
+  0% {
+    left: -8rem;
+  }
+  90% {
+    opacity: 0.125;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}

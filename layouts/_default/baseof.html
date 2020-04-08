@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html
-  lang="{{ .Site.LanguageCode }}"
-  class="vertical centered container unpadded"
+        lang="{{ .Site.LanguageCode }}"
+        class="vertical centered container unpadded"
 >
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Digital Masterpiece LLC." />
-    <meta name="description" content="{{ .Description | plainify }}" />
-    
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Digital Masterpiece LLC."/>
+    <meta name="description" content="{{ .Description | plainify }}"/>
+
     <title>{{ .Title }} - {{ .Site.Title }}</title>
 
     {{ $favicon := resources.Get "images/favicon.png" | resources.Fingerprint }}
-    <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}" />
+    <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}"/>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
     />
 
     {{ $css := resources.Get "scss/digital-masterpiece.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" />
-  </head>
+    <link rel="stylesheet" href="{{ $css.Permalink }}"/>
 
-  <body class="centered vertical container unpadded">
-    {{ partial "header.html" . }}
+    {{ $js := resources.Get "js/dm.js" | resources.Minify | resources.Fingerprint }}
+    <script async defer src="{{ $js.Permalink }}"></script>
+</head>
 
-    <main id="main" class="main">
-      <div class="content vertical centered container">{{ block "main" . }}{{ end }}</div>
-    </main>
+<body class="centered vertical container unpadded">
+{{ partial "header.html" . }}
 
-    {{ partial "footer.html" . }}
-    {{ partial "quote-form.html" . }}
-    <section id="stars" aria-hidden="true"></section>
-  </body>
+<main id="main" class="main">
+    <div class="content vertical centered container shadowed-text">{{ block "main" . }}{{ end }}</div>
+</main>
+
+{{ partial "footer.html" . }}
+{{ partial "quote-form.html" . }}
+</body>
 </html>
