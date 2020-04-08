@@ -1,24 +1,19 @@
-<section aria-label="Quote Form" class="quote transitioned hidden" aria-live="polite">
+<section aria-label="Quote Form" class="quote" aria-live="polite">
     <p class="quote--direct">Email us directly at:</p>
-    <a
-            href="mailto:quote@digital-masterpiece.com?subject=Digital Masterpiece Quote Request"
-            class="contact--email white button shadowed glowing">
+    <a href="mailto:quote@digital-masterpiece.com?subject=Digital Masterpiece Quote Request"
+       class="contact--email white button shadowed glowing">
         contact@digital-masterpiece.com
     </a>
-    <p class="quote--or">or</p>
+    <div class="quote--or">
+        <hr class="quote--or--hr">
+        <span class="quote--or--text">or</span>
+        <hr class="quote--or--hr">
+    </div>
     <form id="contact-form"
-          class="quote--form ended vertical container shadowed darkgray"
+          class="quote--form ended vertical container"
           method="POST"
           action="https://contact.digital-masterpiece.com"
           onsubmit="submitForm(event)">
-        <div role="button"
-             title="Close Quote Form"
-             class="quote--form--close transitioned interactive red"
-             tabindex="0"
-             onclick="hideQuoteForm()">
-            <span></span>
-            <span></span>
-        </div>
         <div class="quote--form--field">
             <label for="name">Name</label>
             <input type="text"

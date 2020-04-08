@@ -90,7 +90,7 @@ if (serviceText) {
 
             // If this isn't the last service, "backspace" the letters.
             if (!(service === services[services.length - 1])) {
-                letters.forEach(letter => {
+                letters.forEach(() => {
                     setTimeout(() => {
                         serviceText.textContent =
                             serviceText.textContent.slice(0, -2) + "|";
@@ -107,20 +107,6 @@ if (serviceText) {
 
 // Quote Form
 // TODO: reCAPTCHa v3
-const quote = document.querySelector(".quote");
-
-const showQuoteForm = () => quote.classList.remove("hidden");
-const hideQuoteForm = () => quote.classList.add("hidden");
-
-window.addEventListener("click", (event) => {
-    if (
-        !event.target.closest(".quote--form") &&
-        event.target.textContent !== "Request a Quote"
-    ) {
-        hideQuoteForm();
-    }
-});
-
 const submitForm = (event) => {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -154,7 +140,7 @@ const submitForm = (event) => {
                 alert(
                     "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
                 );
-                hideQuoteForm();
+                console.error(error)
             });
     }
 };
