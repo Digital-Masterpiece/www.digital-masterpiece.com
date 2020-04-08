@@ -14,13 +14,13 @@
     {{ $favicon := resources.Get "images/favicon.png" | resources.Fingerprint }}
     <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}"/>
 
-    <link
-            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
-            rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     {{ $css := resources.Get "scss/digital-masterpiece.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $css.Permalink }}"/>
+
+    <script>
+        // This exists only to stop the Chromium CSS explode bug with an inline script.
+    </script>
 </head>
 
 <body class="centered vertical container unpadded">

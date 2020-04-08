@@ -1,3 +1,14 @@
+// Mobile navigation scroll locking.
+function lockScrolling() {
+    if (document.getElementById("mobile-navigation").checked) {
+        document.body.style.overflow = "auto";
+    } else {
+        // Scroll back to the top of the page and disable scrolling.
+        window.scrollTo(0, 0);
+        document.body.style.overflow = "hidden";
+    }
+}
+
 // Background Lines
 const intervalLength = 1000;
 
@@ -40,6 +51,59 @@ function makeLine() {
 setInterval(() => {
     makeLine();
 }, intervalLength / 4);
+
+// Home page typing effect.
+const serviceText = document.getElementById("service-offered");
+
+if (serviceText) {
+    let interval = 0;
+    const intervalIncrement = 2500;
+    const services = [
+        "New Customers",
+        "Cost Savings",
+        "Increased Productivity",
+        "Digital Masterpiece"
+    ];
+
+    services.forEach(service => {
+        setTimeout(() => {
+            serviceText.innerText = "";
+            const letters = service.split("");
+            let letterInterval = 0;
+            const letterIntervalIncrement = intervalIncrement / letters.length / 4;
+
+            letters.forEach((letter, index) => {
+                setTimeout(() => {
+                    serviceText.textContent = serviceText.textContent.replace("|", "");
+                    serviceText.textContent += letter + "|";
+                }, letterInterval);
+
+                if (index === letters.length - 1) {
+                    setTimeout(() => {
+                        serviceText.textContent = serviceText.textContent.slice(0, -1);
+                    }, letterInterval + 1);
+                }
+                letterInterval += letterIntervalIncrement;
+            });
+
+            letterInterval += intervalIncrement / 2;
+
+            // If this isn't the last service, "backspace" the letters.
+            if (!(service === services[services.length - 1])) {
+                letters.forEach(letter => {
+                    setTimeout(() => {
+                        serviceText.textContent =
+                            serviceText.textContent.slice(0, -2) + "|";
+                    }, letterInterval);
+                    letterInterval += letterIntervalIncrement;
+                });
+            }
+        }, interval);
+
+        interval += intervalIncrement;
+    });
+}
+
 
 // Quote Form
 // TODO: reCAPTCHa v3
