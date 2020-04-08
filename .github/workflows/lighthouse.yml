@@ -18,6 +18,7 @@ jobs:
         with:
           configPath: "./.github/config/lighthouserc.json"
           temporaryPublicStorage: true
+          runs: 3
           urls: |
             http://localhost:1313/
             http://localhost:1313/about
