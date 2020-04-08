@@ -1,62 +1,51 @@
 <section aria-label="Quote Form" class="quote transitioned hidden">
-  <p class="quote--direct">Email us directly at:</p>
-  <a
-    href="mailto:quote@digital-masterpiece.com?subject=Digital Masterpiece Quote Request"
-    class="quote--email white button shadowed glowing"
-    >quote@digital-masterpiece.com</a
-  >
-  <p class="quote--or">or</p>
-  <form
-    id="contact-form"
-    class="quote--form ended vertical container shadowed darkgray"
-    method="POST"
-    action="https://contact.digital-masterpiece.com"
-    onsubmit="submitForm(event)"
-  >
-    <div
-      role="button"
-      title="Close Quote Form"
-      class="quote--form--close transitioned interactive red"
-      tabindex="0"
-      onclick="hideQuoteForm()"
-    >
-      <span></span>
-      <span></span>
-    </div>
-    <div class="quote--form--field">
-      <label for="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        placeholder="John/Jane Doe"
-        class="white shadowed button"
-        required
-      />
-    </div>
-    <div class="quote--form--field">
-      <label for="email">Email Address</label>
-      <input
-        type="email"
-        id="email"
-        placeholder="user@domain.com"
-        class="white shadowed button"
-        required
-      />
-    </div>
-    <div class="quote--form--field">
-      <label for="message">Message (Optional)</label>
-      <textarea
-        type="text"
-        id="message"
-        class="white shadowed button"
-        placeholder="My business needs a website."
-      ></textarea>
-    </div>
-    <button
-      type="submit"
-      id="submit-button"
-      class="green shadowed-text glowing button">
-      Submit
-    </button>
-  </form>
+    <p class="quote--direct">Email us directly at:</p>
+    <a
+            href="mailto:quote@digital-masterpiece.com?subject=Digital Masterpiece Quote Request"
+            class="contact--email white button shadowed glowing">
+        contact@digital-masterpiece.com
+    </a>
+    <p class="quote--or">or</p>
+    <form id="contact-form"
+          class="quote--form ended vertical container shadowed darkgray"
+          method="POST"
+          action="https://contact.digital-masterpiece.com"
+          onsubmit="submitForm(event)">
+        <div role="button"
+             title="Close Quote Form"
+             class="quote--form--close transitioned interactive red"
+             tabindex="0"
+             onclick="hideQuoteForm()">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="quote--form--field">
+            <label for="name">Name</label>
+            <input type="text"
+                   id="name"
+                   placeholder="John/Jane Doe"
+                   class="white shadowed button"
+                   required/>
+        </div>
+        <div class="quote--form--field">
+            <label for="email">Email Address</label>
+            <input type="email"
+                   id="email"
+                   placeholder="user@domain.com"
+                   class="white shadowed button"
+                   required/>
+        </div>
+        <div class="quote--form--field">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message"
+                      class="white shadowed button"
+                      placeholder="My business needs a website.">
+            </textarea>
+        </div>
+        <button type="submit"
+                id="submit-button"
+                class="green shadowed-text glowing button">
+            Submit
+        </button>
+    </form>
 </section>

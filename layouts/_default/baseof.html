@@ -21,9 +21,6 @@
 
     {{ $css := resources.Get "scss/digital-masterpiece.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $css.Permalink }}"/>
-
-    {{ $js := resources.Get "js/dm.js" | resources.Minify | resources.Fingerprint }}
-    <script async defer src="{{ $js.Permalink }}"></script>
 </head>
 
 <body class="centered vertical container unpadded">
@@ -35,5 +32,8 @@
 
 {{ partial "footer.html" . }}
 {{ partial "quote-form.html" . }}
+
+{{ $js := resources.Get "js/dm.js" | resources.Minify | resources.Fingerprint }}
+<script async defer src="{{ $js.Permalink }}"></script>
 </body>
 </html>

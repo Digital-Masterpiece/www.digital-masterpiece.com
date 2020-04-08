@@ -17,7 +17,7 @@ Communicating with **every** position in the workflow process gives us valuable 
 
 Streamlining your workflow in a digital manner is the [best](https://digitalmarketinginstitute.com/en-us/blog/what-is-the-cost-of-not-going-digital-for-a-business) decision you can make for your business and employees.
 
-Just like our websites, accessibility is always a top priority in our development endeavors, and is included in pricing.
+Security, performance, and accessibility are always priorities.
 
 ## Cost Factors
 

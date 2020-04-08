@@ -19,7 +19,7 @@ Content is supplied by the client. In most cases we offer suggestions in phrasin
 
 For e-commerce sites, we recommend a separate site dedicated to just selling your products and handling transactions. E-commerce sites typically fall under the [Web Application](/web-applications) pricing structure for us.
 
-Accessibility is always in mind for us, and is included in pricing.
+Security, performance, and accessibility are always priorities.
 
 ## Cost Factors
 
