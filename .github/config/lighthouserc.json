@@ -1,6 +1,6 @@
 {
   "ci": {
-    "urls": [
+    "url": [
       "http://localhost:1313/",
       "http://localhost:1313/about/",
       "http://localhost:1313/request-a-quote/",
