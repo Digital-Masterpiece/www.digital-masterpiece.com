@@ -1,0 +1,1 @@
+![Lighthouse CI](https://github.com/nfrostdev/www.digital-masterpiece.com/workflows/Lighthouse%20CI/badge.svg)
