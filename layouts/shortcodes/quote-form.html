@@ -9,11 +9,20 @@
         <span class="quote--or--text">or</span>
         <hr class="quote--or--hr">
     </div>
-    <form id="contact-form"
+    <noscript>
+        <style>
+            #quote-form, .quote--or {
+                display: none;
+            }
+        </style>
+
+    </noscript>
+    <form id="quote-form"
           class="quote--form ended vertical container"
           method="POST"
           action="https://contact.digital-masterpiece.com"
           onsubmit="submitForm(event)">
+        <input type="hidden" id="token"/>
         <div class="quote--form--field">
             <label for="name">Name</label>
             <input type="text"
@@ -34,8 +43,7 @@
             <label for="message">Message (Optional)</label>
             <textarea id="message"
                       class="white shadowed button"
-                      placeholder="My business needs a website.">
-            </textarea>
+                      placeholder="My business needs a website."></textarea>
         </div>
         <button type="submit"
                 id="submit-button"
