@@ -4,7 +4,7 @@
     h-full w-full lg:w-auto
     px-5
     text-xl">
-        <a href="/" class="flex justify-center items-center md:mr-16">
+        <a href="/" class="flex justify-center items-center md:mr-16 h-full">
             {{ $logo := resources.Get "images/favicon.svg" | resources.Fingerprint }}
             <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece Logo" class="h-8 w-8 mr-1"/>
             <span class="relative">Digital Masterpiece</span>
@@ -32,6 +32,7 @@
         transition duration-200 ease-linear
         opacity-0 lg:opacity-100
         z-20
+        p-4 lg:p-0
         h-full
         bg-gray-900 lg:bg-transparent
         navigation">
