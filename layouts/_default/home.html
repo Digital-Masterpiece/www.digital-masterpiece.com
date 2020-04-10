@@ -1,31 +1,4 @@
 {{ define "main" }}
-<h1 class="sr-only">Home</h1>
-
-<section aria-label="Hero" class="hero vertical centered container shadowed-text">
-  {{/* Dynamic text will be hidden for screen readers. */}}
-  <h2 class="hero--callout vertical centered container" aria-hidden="true">
-    <div class="hero--callout--subtext">Envision Your</div>
-    <div
-      id="service-offered"
-      class="hero--callout--headline centered container"
-    >
-      <noscript>Digital Masterpiece</noscript>
-    </div>
-  </h2>
-  <h2 class="sr-only">Envision Your Digital Masterpiece</h2>
-
-  <h3 class="tagline">Let's make it real.</h3>
-  <div class="centered wrapping container">
-    <a href="/request-a-quote" class="big white shadowed bordered glowing button"
-    onclick="showQuoteForm()"
-      >Request a Quote</a
-    >
-    <a href="/about" class="big yellow shadowed bordered glowing button">
-      <span>Learn More</span>
-      <span class="sr-only">
-        Learn more about Digital Masterpiece LLC and the services we provide.
-      </span>
-    </a>
-  </div>
-</section>
+  <h1 class="sr-only">Home</h1>
+  {{ .Content }}
 {{ end }}
