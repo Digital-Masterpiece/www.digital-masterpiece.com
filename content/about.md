@@ -11,7 +11,7 @@ We are a remote Web Development company in the United States that specializes in
 
 {{< services-buttons >}}
 
-### Tenets
+## Tenets
 
 1. Follow the Agile Development Lifecycle.
 2. Have a clear requirement of the Minimum Viable Product.
