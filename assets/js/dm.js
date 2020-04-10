@@ -106,36 +106,33 @@ if (serviceText) {
 
 
 // Quote Form
-// TODO: reCAPTCHa v3
 const submitForm = (event) => {
     event.preventDefault();
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+    const token = document.getElementById("token").value;
     let params = new URLSearchParams([
         ["name", name],
         ["email", email],
         ["message", message],
+        ["token", token],
     ]);
 
     if (name && email) {
-        const url =
-            document.getElementById("contact-form").action +
-            "?" +
-            params.toString();
+        const url = document.getElementById("quote-form").action + "?" + params.toString();
         fetch(url, {
-            method: "post",
+            method: "POST",
+        }).then((response) => {
+            if (response.status === 200) {
+                document.getElementById("submit-button").textContent = "Sent!";
+                window.location.href = "/thank-you";
+            } else {
+                alert(
+                    "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
+                );
+            }
         })
-            .then((response) => {
-                if (response.status === 200) {
-                    document.getElementById("submit-button").textContent = "Sending!";
-                    window.location.href = "/thank-you";
-                } else {
-                    alert(
-                        "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
-                    );
-                }
-            })
             .catch((error) => {
                 alert(
                     "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
