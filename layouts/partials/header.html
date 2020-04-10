@@ -19,11 +19,12 @@
         </label>
     
         <nav aria-label="Primary" class="flex flex-row justify-center items-center">
-            {{ partial "header/link.html" (dict "text" "About" "link" "/about") }}
-            {{ partial "header/link.html" (dict "text" "Websites" "link" "/websites") }}
-            {{ partial "header/link.html" (dict "text" "Web Applications" "link" "/web-applications") }}
-            {{/* partial "header/link.html" (dict "text" "Clients" "link" "/clients") */}}
-            {{ partial "header/link.html" (dict "text" "Request a Quote" "link" "/request-a-quote") }}
+            {{ $current := .Page.RelPermalink }}
+            {{ partial "header/link.html" (dict "text" "About" "link" "/about/" "current" $current ) }}
+            {{ partial "header/link.html" (dict "text" "Websites" "link" "/websites/" "current" $current) }}
+            {{ partial "header/link.html" (dict "text" "Web Applications" "link" "/web-applications/" "current" $current) }}
+            {{/* partial "header/link.html" (dict "text" "Clients" "link" "/clients/" "current" $current) */}}
+            {{ partial "header/link.html" (dict "text" "Request a Quote" "link" "/request-a-quote/" "current" $current) }}
         </nav>
     </div>
 </header>
