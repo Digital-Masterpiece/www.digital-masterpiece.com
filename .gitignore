@@ -12,3 +12,4 @@ $RECYCLE.BIN/
 .DS_Store
 resources
 .idea
+node_modules

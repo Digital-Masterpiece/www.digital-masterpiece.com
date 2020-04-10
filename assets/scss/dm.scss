@@ -47,11 +47,8 @@ h1 {
   text-align: center;
 }
 
-.footer {
-  flex-shrink: 0;
-}
 
-.footer,
+
 .content {
   z-index: 1;
 }
@@ -60,25 +57,14 @@ h1 {
   flex-grow: 1;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  font-weight: 300;
-  font-size: 75%;
-  text-align: center;
-}
-
 .copyright {
-  padding: 0.5rem 0.75rem;
-  border-radius: 5rem;
   background-color: rgba(0, 0, 0, 0.75);
-  margin-bottom: 1rem;
 }
 
 // https://developers.google.com/recaptcha/docs/faq
 .grecaptcha-badge { visibility: hidden; }
 
-.content, .footer {
+.content {
   text-align: left;
   margin: 0 0 1rem;
 

@@ -12,8 +12,16 @@
     <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}"/>
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-    {{ $css := resources.Get "scss/dm.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}"/>
+
+    {{ $options := dict "targetPath" "css/dm.css" }}
+    {{ $scss := resources.Get "scss/dm.scss" | toCSS $options }}
+    {{ if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") }}
+        {{ $css := $scss | postCSS | minify |fingerprint }}
+        <link rel="stylesheet" href="{{ $css.Permalink }}"/>
+    {{ else }}
+        {{ $css := $scss | minify |fingerprint }}
+        <link rel="stylesheet" href="{{ $css.Permalink }}"/>
+    {{ end }}
 
     <script>
         // This exists only to stop the Chromium CSS explode bug with an inline script.
