@@ -121,11 +121,11 @@ const submitForm = (event) => {
 
     if (name && email) {
         const url = document.getElementById("quote-form").action + "?" + params.toString();
+        document.getElementById("submit-button").textContent = "Sending!";
         fetch(url, {
             method: "POST",
         }).then((response) => {
             if (response.status === 200) {
-                document.getElementById("submit-button").textContent = "Sent!";
                 window.location.href = "/thank-you";
             } else {
                 alert(

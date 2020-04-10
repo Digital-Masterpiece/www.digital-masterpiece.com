@@ -56,8 +56,8 @@ p {
   @extend .max-w-full, .mt-4;
 }
 
-.main-content {
-  flex-grow: 1;
+textarea {
+  resize: none;
 }
 
 .copyright {
@@ -75,11 +75,11 @@ p {
     height: 0.0625rem;
 
     &:first-child {
-      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
+      background: linear-gradient(to right, transparent, rgba(white, 0.5));
     }
 
     &:last-child {
-      background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5));
+      background: linear-gradient(to left, transparent, rgba(white, 0.5));
     }
   }
 }
