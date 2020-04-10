@@ -1,29 +1,29 @@
 <header class="header">
     <a href="#main" class="sr-only">Skip to main content.</a>
-    <div class="header--container centered container">
-        <a href="/" class="header--branding white-text header--link">
+    <div class="flex flex-row justify-center items-center text-xl">
+        <a href="/" class="flex justify-center items-center md:mr-16">
             {{ $logo := resources.Get "images/favicon.svg" | resources.Fingerprint }}
-            <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece LLC. Logo" class="header--logo" />
-            <span>Digital Masterpiece</span>
+            <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece Logo" class="h-8 w-8 mr-1"/>
+            <span class="relative">Digital Masterpiece</span>
         </a>
 
         <input type="checkbox" id="mobile-navigation" class="sr-only" aria-hidden="true" />
         <label for="mobile-navigation"
-        class="mobile-navigation-label white shadowed glowing button"
+        class="mobile-navigation-label"
         onclick="lockScrolling()"
         tabindex="0"
         aria-hidden="true">
-            <span class="transitioned hamburger"></span>
-            <span class="transitioned hamburger"></span>
-            <span class="transitioned hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
         </label>
     
-        <nav aria-label="Primary" class="header--navigation transitioned">
-            <a href="/about" class="white-text header--link">About</a>
-            <a href="/websites" class="white-text header--link">Websites</a>
-            <a href="/web-applications" class="white-text header--link">Web Applications</a>
-            {{/*  <a href="/clients" class="white-text header--link">Clients</a>  */}}
-            <a href="/request-a-quote" class="white-text header--link" onclick="showQuoteForm()">Request a Quote</a>
+        <nav aria-label="Primary" class="flex flex-row justify-center items-center">
+            {{ partial "header/link.html" (dict "text" "About" "link" "/about") }}
+            {{ partial "header/link.html" (dict "text" "Websites" "link" "/websites") }}
+            {{ partial "header/link.html" (dict "text" "Web Applications" "link" "/web-applications") }}
+            {{/* partial "header/link.html" (dict "text" "Clients" "link" "/clients") */}}
+            {{ partial "header/link.html" (dict "text" "Request a Quote" "link" "/request-a-quote") }}
         </nav>
     </div>
 </header>
