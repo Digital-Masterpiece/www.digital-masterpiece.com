@@ -1,6 +1,7 @@
 @import "tailwind.min";
 @import "dm-line";
 @import "header";
+@import "mobile-navigation";
 
 .sr-only {
   border: 0 !important;
@@ -35,9 +36,6 @@ html {
 }
 
 body {
-  width: 100%;
-  flex-grow: 1;
-  color: white;
   background: radial-gradient(ellipse at top, rgba(#141519, 0.95), rgba(black, 0.8));
 }
 
@@ -101,64 +99,6 @@ body {
 
   .button {
     margin: 0.5rem;
-  }
-}
-
-#mobile-navigation {
-  display: none;
-
-  &:checked {
-    & ~ .header--navigation {
-      opacity: 1;
-      pointer-events: initial;
-    }
-
-    & + .mobile-navigation-label {
-      .hamburger {
-        &:first-child {
-          top: 0.9375rem;
-        }
-
-        &:last-child {
-          top: 0.9375rem;
-        }
-      }
-    }
-  }
-}
-
-.mobile-navigation-label {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.25rem;
-  height: 2rem;
-  margin-right: 0.75rem;
-  outline: 0;
-
-  @media (min-width: 64rem) {
-    display: none;
-  }
-
-  .hamburger {
-    position: absolute;
-    width: 1.375rem;
-    height: 0.125rem;
-    background-color: black;
-    border-radius: 0.25rem;
-
-    &:first-child {
-      top: 0.5rem;
-    }
-
-    &:nth-child(2) {
-      top: 0.9375rem;
-    }
-
-    &:last-child {
-      top: 1.375rem;
-    }
   }
 }
 

@@ -1,24 +1,40 @@
 <header class="header">
     <a href="#main" class="sr-only">Skip to main content.</a>
-    <div class="flex flex-row justify-center items-center text-xl">
+    <div class="flex flex-row justify-center items-center
+    h-full w-full lg:w-auto
+    px-5
+    text-xl">
         <a href="/" class="flex justify-center items-center md:mr-16">
             {{ $logo := resources.Get "images/favicon.svg" | resources.Fingerprint }}
             <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece Logo" class="h-8 w-8 mr-1"/>
             <span class="relative">Digital Masterpiece</span>
         </a>
 
-        <input type="checkbox" id="mobile-navigation" class="sr-only" aria-hidden="true" />
+        <input type="checkbox" id="mobile-navigation" class="sr-only" aria-hidden="true"/>
         <label for="mobile-navigation"
-        class="mobile-navigation-label"
-        onclick="lockScrolling()"
-        tabindex="0"
-        aria-hidden="true">
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
+               class="mobile-navigation-label
+               bg-white
+               relative
+               w-10 h-10
+               flex justify-center items-center lg:hidden
+               rounded-sm
+               ml-auto"
+               onclick="lockScrolling()"
+               tabindex="0"
+               aria-hidden="true">
+            <span class="hamburger transition-all duration-100 ease-linear"></span>
+            <span class="hamburger transition-all duration-100 ease-linear"></span>
+            <span class="hamburger transition-all duration-100 ease-linear"></span>
         </label>
-    
-        <nav aria-label="Primary" class="flex flex-row justify-center items-center">
+
+        <nav aria-label="Primary" class="flex flex-col justify-start items-center flex-shrink-0 lg:flex-row
+        fixed lg:relative right-0 bottom-0 left-0 lg:right-auto lg:bottom-auto lg:left-auto
+        transition duration-200 ease-linear
+        opacity-0 lg:opacity-100
+        z-20
+        h-full
+        bg-gray-900 lg:bg-transparent
+        navigation">
             {{ $current := .Page.RelPermalink }}
             {{ partial "header/link.html" (dict "text" "About" "link" "/about/" "current" $current ) }}
             {{ partial "header/link.html" (dict "text" "Websites" "link" "/websites/" "current" $current) }}

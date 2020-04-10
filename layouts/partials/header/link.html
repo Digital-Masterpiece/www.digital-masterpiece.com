@@ -1,4 +1,6 @@
 <a href="{{ .link }}" class="p-4
-            border-b-2 border-transparent hover:border-yellow-500 focus:border-yellow-500
-            {{ if eq .current .link }}border-yellow-400{{ end }}
+            inline-flex justify-center items-center
+            lg:h-full
+            border-b-2 border-transparent hover:border-yellow-300 focus:border-yellow-300
+            {{ if eq .current .link }}border-yellow-500{{ end }}
             transition duration-200 ease-linear">{{ .text }}</a>
