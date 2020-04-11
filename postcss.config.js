@@ -5,7 +5,13 @@ module.exports = {
             content: [
                 './layouts/**/*.html',
                 './assets/js/**/*.js'
-            ]
+            ],
+            whitelist: [
+                'grecaptcha-badge',
+                'ul',
+                'ol'
+            ],
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         },
         autoprefixer: {},
         cssnano: {preset: 'default'}
