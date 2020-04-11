@@ -19,49 +19,6 @@ function lockScrolling() {
     }
 }
 
-// Background Lines
-const intervalLength = 1000;
-
-function makeLine() {
-    let line = document.createElement('div');
-    line.classList.add('dm-line');
-
-    const orientation = Math.random();
-    const direction = Math.random();
-
-    if (orientation >= 0.5) {
-        const randomXPosition = Math.floor(Math.random() * document.body.offsetWidth);
-        line.classList.add('vertical');
-        line.style.left = randomXPosition + 'px';
-
-        if (direction >= 0.5) {
-            line.classList.add('top');
-        } else {
-            line.classList.add('bottom');
-        }
-    } else {
-        const randomYPosition = Math.floor(Math.random() * document.body.offsetHeight);
-        line.classList.add('horizontal');
-        line.style.top = randomYPosition + 'px';
-
-        if (direction >= 0.5) {
-            line.classList.add('left');
-        } else {
-            line.classList.add('right');
-        }
-    }
-
-    document.body.appendChild(line);
-
-    setTimeout(() => {
-        line.remove();
-    }, intervalLength);
-}
-
-setInterval(() => {
-    makeLine();
-}, intervalLength / 4);
-
 // Home page typing effect.
 const serviceText = document.getElementById("service-offered");
 
