@@ -1,3 +1,13 @@
+function initializeRecaptcha() {
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LfpSOgUAAAAANUxQLx28jWpKp19nT0pV08kUCRq', {action: 'homepage'}).then(function (token) {
+            if (document.getElementById('quote-form')) {
+                document.getElementById('token').value = token;
+            }
+        });
+    });
+}
+
 // Mobile navigation scroll locking.
 function lockScrolling() {
     if (document.getElementById("mobile-navigation").checked) {

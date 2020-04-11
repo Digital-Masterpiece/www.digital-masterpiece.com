@@ -1,7 +1,4 @@
+<script async defer src="https://www.google.com/recaptcha/api.js?onload=initializeRecaptcha&render=6LfpSOgUAAAAANUxQLx28jWpKp19nT0pV08kUCRq"></script>
+
 {{ $js := resources.Get "js/dm.js" | resources.Minify | resources.Fingerprint }}
 <script async defer src="{{ $js.Permalink }}"></script>
-
-<script async defer src="https://www.google.com/recaptcha/api.js?render=6LfpSOgUAAAAANUxQLx28jWpKp19nT0pV08kUCRq"></script>
-
-{{ $recaptcha := resources.Get "js/recaptcha.js" | resources.Minify | resources.Fingerprint }}
-<script async defer src="{{ $recaptcha.Permalink }}"></script>
