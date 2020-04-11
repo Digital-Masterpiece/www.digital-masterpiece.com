@@ -19,60 +19,8 @@ function lockScrolling() {
     }
 }
 
-// Home page typing effect.
-const serviceText = document.getElementById("service-offered");
-
-if (serviceText) {
-    let interval = 0;
-    const intervalIncrement = 2500;
-    const services = [
-        "New Customers",
-        "Cost Savings",
-        "Digital Masterpiece"
-    ];
-
-    services.forEach(service => {
-        setTimeout(() => {
-            serviceText.innerText = "";
-            const letters = service.split("");
-            let letterInterval = 0;
-            const letterIntervalIncrement = intervalIncrement / letters.length / 4;
-
-            letters.forEach((letter, index) => {
-                setTimeout(() => {
-                    serviceText.textContent = serviceText.textContent.replace("|", "");
-                    serviceText.textContent += letter + "|";
-                }, letterInterval);
-
-                if (index === letters.length - 1) {
-                    setTimeout(() => {
-                        serviceText.textContent = serviceText.textContent.slice(0, -1);
-                    }, letterInterval + 1);
-                }
-                letterInterval += letterIntervalIncrement;
-            });
-
-            letterInterval += intervalIncrement / 2;
-
-            // If this isn't the last service, "backspace" the letters.
-            if (!(service === services[services.length - 1])) {
-                letters.forEach(() => {
-                    setTimeout(() => {
-                        serviceText.textContent =
-                            serviceText.textContent.slice(0, -2) + "|";
-                    }, letterInterval);
-                    letterInterval += letterIntervalIncrement;
-                });
-            }
-        }, interval);
-
-        interval += intervalIncrement;
-    });
-}
-
-
 // Quote Form
-const submitForm = (event) => {
+function submitForm(event) {
     event.preventDefault();
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -87,6 +35,7 @@ const submitForm = (event) => {
 
     if (name && email) {
         const url = document.getElementById("quote-form").action + "?" + params.toString();
+        const errorMessage = "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com.";
         document.getElementById("submit-button").textContent = "Sending!";
         fetch(url, {
             method: "POST",
@@ -94,16 +43,11 @@ const submitForm = (event) => {
             if (response.status === 200) {
                 window.location.href = "/thank-you";
             } else {
-                alert(
-                    "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
-                );
+                alert(errorMessage);
             }
-        })
-            .catch((error) => {
-                alert(
-                    "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com."
-                );
-                console.error(error)
-            });
+        }).catch((error) => {
+            alert(errorMessage);
+            console.error(error)
+        });
     }
-};
+}
