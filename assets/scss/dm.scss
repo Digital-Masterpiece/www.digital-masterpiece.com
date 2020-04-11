@@ -66,8 +66,7 @@ textarea {
 
 // https://developers.google.com/recaptcha/docs/faq
 .grecaptcha-badge {
-  position: fixed !important;
-  right: -64rem !important;
+  visibility: hidden;
 }
 
 .quote {
