@@ -2,6 +2,7 @@
 @import "header";
 @import "mobile-navigation";
 @import "buttons";
+@import "display-types";
 
 .sr-only {
   border: 0 !important;
@@ -51,7 +52,7 @@ ul, ol {
 }
 
 p {
-  width: 32rem;
+  max-width: 32rem;
   @extend .max-w-full, .mt-4;
 }
 

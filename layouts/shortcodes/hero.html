@@ -1,15 +1,15 @@
 <section aria-label="Hero">
-    <h2>
-        <span class="block text-2xl lg:text-3xl">Envision Your</span>
-        <span class="flex justify-center items-center text-4xl lg:text-6xl h-32 leading-none">
-            Digital Masterpiece
-        </span>
+    <div class="mx-auto flex flex-wrap justify-center items-center">
+        {{ partial "drawings/display-types.html" (dict "type" "mobile") }}
+        {{ partial "drawings/display-types.html" (dict "type" "tablet") }}
+        {{ partial "drawings/display-types.html" (dict "type" "desktop") }}
+    </div>
+
+    <h2 class="mt-0">
+        <span class="block lg:text-4xl">Fast, Beautiful, & Accessible Websites</span>
+        <span class="block text-base lg:text-xl">carefully curated to meet your business needs</span>
     </h2>
-    <h2 class="sr-only">Envision Your Digital Masterpiece</h2>
-
-    <h3 class="text-1xl lg:text-2xl mt-4">Let's make it real.</h3>
-
-    <div class="mt-4">
+    <div class="mt-4 mb-8">
         <a href="/request-a-quote" class="white-button
             text-lg
             inline-block
@@ -36,4 +36,12 @@
             <span class="sr-only">Learn more about Digital Masterpiece LLC and the services we provide.</span>
         </a>
     </div>
+
+    <h3 class="block lg:text-3xl mt-16 mb-4">Modern business demands a <strong>strong web presence</strong>.</h3>
+    <hr class="my-4 border-0 bg-gray-500 h-px w-3/4 mx-auto"/>
+
+    {{ partial "statistic.html" (dict "percent" "88" "text" "of consumers who search for a type of business on a mobile device call or go to that business within 24 hours." ) }}
+    {{ partial "statistic.html" (dict "percent" "57" "text" "of internet users say they won’t recommend a business with a poorly designed website on mobile." ) }}
+    {{ partial "statistic.html" (dict "percent" "70" "text" "of small business websites lack a Call to Action (CTA) on their homepage." ) }}
+    {{ partial "statistic.html" (dict "percent" "75" "text" "of consumers admit to making judgements on a company’s credibility based on the company’s website design." ) }}
 </section>
