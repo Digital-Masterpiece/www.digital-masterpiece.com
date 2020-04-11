@@ -46,10 +46,6 @@
 </main>
 
 {{ partial "footer.html" . }}
-
-{{ $js := resources.Get "js/dm.js" | resources.Minify | resources.Fingerprint }}
-<script async defer src="{{ $js.Permalink }}"></script>
-
-{{ partial "recaptcha.html" }}
+{{ partial "scripts.html" }}
 </body>
 </html>
