@@ -61,7 +61,6 @@ if (serviceText) {
     const services = [
         "New Customers",
         "Cost Savings",
-        "Increased Productivity",
         "Digital Masterpiece"
     ];
 

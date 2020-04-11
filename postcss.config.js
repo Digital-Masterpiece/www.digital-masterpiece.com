@@ -4,10 +4,8 @@ module.exports = {
         '@fullhuman/postcss-purgecss': {
             content: [
                 './layouts/**/*.html',
-                './assets/scss/*.scss',
-                './assets/js/*.js'
-            ],
-            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+                './assets/js/**/*.js'
+            ]
         },
         autoprefixer: {},
         cssnano: {preset: 'default'}
