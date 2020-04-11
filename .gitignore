@@ -12,4 +12,5 @@ $RECYCLE.BIN/
 .DS_Store
 resources
 .idea
+.firebase/*
 node_modules
