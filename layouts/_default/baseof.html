@@ -11,8 +11,16 @@
     {{ $favicon := resources.Get "images/favicon.png" | resources.Fingerprint }}
     <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}"/>
 
-    <link rel="preconnect" href="https://www.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://www.gstatic.com"/>
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap"/>
+    </noscript>
+    <script>
+        let fonts = document.createElement('link');
+        fonts.rel = "stylesheet";
+        fonts.href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap";
+        document.head.appendChild(fonts);
+    </script>
 
     {{ $options := dict "targetPath" "css/dm.css" }}
     {{ $scss := resources.Get "scss/dm.scss" | toCSS $options }}
