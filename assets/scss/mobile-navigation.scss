@@ -1,6 +1,4 @@
 #mobile-navigation {
-  display: none;
-
   &:checked {
     & ~ .navigation {
       opacity: 1;

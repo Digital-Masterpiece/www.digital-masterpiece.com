@@ -4,27 +4,27 @@
     <a href="#main" class="sr-only">Skip to main content.</a>
     <div class="flex flex-row justify-center items-center
     h-full w-full lg:w-auto
-    px-5
     text-xl">
         <a href="/" class="flex justify-center items-center
+        p-4
         lg:border-b-2 border-transparent hover:border-yellow-300 focus:border-yellow-300
         {{ if eq $current "/" }}border-yellow-500{{ end }}
-        md:mr-16
+        mr-auto lg:mr-16
         h-full">
             {{ $logo := resources.Get "images/favicon.svg" | resources.Fingerprint }}
             <img src="{{ $logo.Permalink }}" alt="Digital Masterpiece Logo" class="h-8 w-8 mr-1"/>
             <span class="relative">Digital Masterpiece</span>
         </a>
 
-        <input type="checkbox" id="mobile-navigation" class="sr-only" aria-hidden="true"/>
+        <input type="checkbox" id="mobile-navigation" class="hidden" aria-hidden="true"/>
         <label for="mobile-navigation"
                class="mobile-navigation-label
                bg-white
                relative
                w-10 h-10
+               mr-5
                flex justify-center items-center lg:hidden
-               rounded-sm
-               ml-auto"
+               rounded-sm"
                onclick="lockScrolling()"
                tabindex="0"
                aria-hidden="true">
