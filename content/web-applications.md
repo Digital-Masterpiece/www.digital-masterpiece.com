@@ -11,13 +11,11 @@ draft: false
 
 {{< quote-button >}}
 
-We conceptualization, develop, deploy, and host custom web applications after taking the time to get to know your business.
-
-Communicating with **every** position in the workflow process gives us valuable insight into how to optimize your business' digital efficiency.
+## We conceptualize, develop, deploy, and host custom web applications.
 
 Streamlining your workflow in a digital manner is the [best](https://digitalmarketinginstitute.com/en-us/blog/what-is-the-cost-of-not-going-digital-for-a-business) decision you can make for your business and employees.
 
-Security, performance, and accessibility are always priorities.
+Communicating with **every** position in the workflow process gives us valuable insight into how to optimize your business' digital efficiency.
 
 ## Cost Factors
 

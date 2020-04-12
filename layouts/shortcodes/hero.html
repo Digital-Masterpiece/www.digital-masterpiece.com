@@ -1,9 +1,5 @@
 <section aria-label="Home" class="p-8 lg:p-16">
-    <div class="mx-auto flex flex-wrap justify-center items-center">
-        {{ partial "drawings/display-types.html" (dict "type" "mobile") }}
-        {{ partial "drawings/display-types.html" (dict "type" "tablet") }}
-        {{ partial "drawings/display-types.html" (dict "type" "desktop") }}
-    </div>
+    {{ partial "drawings/websites.html" }}
 
     <h2 class="mt-0">
         <span class="block text-2xl mb-2 lg:text-4xl">Fast, Beautiful, Accessible Websites</span>
@@ -38,7 +34,7 @@
     </div>
 </section>
 
-<section aria-labelledby="modern-business" class="statistics relative flex flex-col p-8 lg:p-16 bg-gray-900 w-full z-10">
+<section aria-labelledby="modern-business" class="relative flex flex-col p-8 lg:p-16 bg-gray-900 w-full z-10">
     <h2 id="modern-business" class="block text-xl md:text-2xl lg:text-4xl mt-0 mb-8 leading-tight">
         Modern business demands a<br/><strong>strong web presence</strong>.
     </h2>

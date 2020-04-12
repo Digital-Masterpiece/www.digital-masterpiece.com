@@ -1,0 +1,2 @@
+{{ $logo := resources.Get "images/favicon.svg" | resources.Fingerprint }}
+<img src="{{ $logo.Permalink }}" alt="Digital Masterpiece Logo" class="h-16 w-16 md:h-32 md:w-32 mb-4"/>
