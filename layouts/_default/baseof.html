@@ -41,7 +41,7 @@
 <body class="flex flex-col text-white">
 {{ partial "header.html" . }}
 
-<main id="main" class="flex flex-col flex-grow justify-start items-center p-8 text-center flex-grow z-10">
+<main id="main" class="flex flex-col flex-grow justify-start items-center text-center flex-grow z-10 {{ if ne .Page.RelPermalink "/" }}p-8 text-lg{{ end }}">
     {{ block "main" . }}{{ end }}
 </main>
 
