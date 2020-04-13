@@ -11,13 +11,11 @@ draft: false
 
 **Typical Price Range: $30,000 - $500,000**
 
-{{< quote-button >}}
-
 ## We conceptualize, develop, deploy, and host custom web applications.
 
 Streamlining your workflow in a digital manner is the [best](https://digitalmarketinginstitute.com/en-us/blog/what-is-the-cost-of-not-going-digital-for-a-business) decision you can make for your business and employees.
 
-Communicating with **every** position in the workflow process gives us valuable insight into how to optimize your business' digital efficiency.
+{{< quote-button >}}
 
 ## Cost Factors
 

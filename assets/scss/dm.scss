@@ -24,7 +24,8 @@ html, body {
 
 html {
   font-family: "Quicksand", sans-serif;
-  background-image: url("/images/binding_dark.png");
+  //background-image: url("/images/binding_dark.png");
+  background-color: #141519;
 
   @media (min-width: 1921px) {
     font-size: 24px;
@@ -48,11 +49,11 @@ h2 {
 }
 
 ul, ol {
-  @extend .list-disc, .text-left, .ml-2;
+  @extend .list-disc, .text-left;
 }
 
 p {
-  @extend .mt-6, .max-w-xl;
+  @extend .mt-6, .max-w-lg;
 
   a {
     @extend .text-yellow-500, .hover\:text-yellow-400, .focus\:text-yellow-400, .border-b, .border-yellow-400;
@@ -63,8 +64,12 @@ textarea {
   resize: none;
 }
 
-.copyright {
-  background-color: rgba(0, 0, 0, 0.75);
+.header, .footer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+  filter: drop-shadow(0 0 0.5rem rgba(black, 0.5));
 }
 
 // https://developers.google.com/recaptcha/docs/faq

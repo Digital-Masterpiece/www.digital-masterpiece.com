@@ -1,0 +1,15 @@
+<section aria-labelledby="webapps" class="relative flex flex-col justify-center items-center p-8 lg:p-16 w-full z-10">
+    {{ partial "drawings/service-types.html" (dict "service" "webapp") }}
+
+    <h2 id="webapps" class="block text-xl md:text-2xl lg:text-4xl mt-4 mb-8 leading-tight">
+        Competitive business requires <br/><strong>efficient digital solutions</strong>.
+    </h2>
+
+    <div class="w-auto mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {{ partial "reason.html" (dict "percent" "88" "title" "Stay Competitive" "text" "Digital speed is as much as 5 times faster than traditional businesses. Without a digital presence, it’s easy to be lost in a sea of fast-moving strategy." "link" "https://digitalmarketinginstitute.com/en-us/blog/what-is-the-cost-of-not-going-digital-for-a-business" ) }}
+        {{ partial "reason.html" (dict "percent" "75" "title" "Increase Productivity" "text" "A digital workplace can revolutionize an organization, save money, and make a company more competitive." "link" "https://www.beekeeper.io/blog/top-ten-hidden-costs-of-not-going-digital/" ) }}
+        {{ partial "reason.html" (dict "percent" "61" "title" "Find New Markets" "text" "The improved digital focus gives Nike a faster product development cycle, which allows it to get new products to market quickly, respond to and set trends and control how many items are produced." "link" "https://www.forbes.com/sites/blakemorgan/2019/07/21/7-examples-of-how-digital-transformation-impacted-business-performance/#264b9f2351bb" ) }}
+        {{ partial "reason.html" (dict "percent" "57" "title" "Reach New Customers" "text" "The cloud enables companies to be fast, dynamic and flexible  – giving your organization the ability to test new projects that are cost-effective and low-risk – allowing you to use technology to meet customer demands quicker." "link" "https://www.superoffice.com/blog/digital-transformation/" ) }}
+    </div>
+    {{ partial "button-link.html" (dict "link" "/web-applications" "color" "blue" "text" "Web Application Pricing")}}
+</section>

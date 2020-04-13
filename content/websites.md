@@ -11,11 +11,11 @@ draft: false
 
 **Typical Price Range: $2,000 - $25,000**
 
-{{< quote-button >}}
-
 ## We conceptualize, develop, deploy, and host websites.
 
-We create [JAMStack](https://jamstack.org/) sites that will get your potential clients what they need to make an informed decision. E-commerce sites fall under the [Web Application](/web-applications) pricing structure for us.
+We create [JAMStack](https://jamstack.org/) sites that will get your potential clients what they need to make an informed decision.
+
+{{< quote-button >}}
 
 ## Cost Factors
 

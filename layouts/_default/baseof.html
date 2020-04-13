@@ -30,10 +30,9 @@
         {{ $css := $scss | minify |fingerprint }}
         <link rel="stylesheet" href="{{ $css.Permalink }}"/>
     {{ end }}
-
     <script>
         // This exists only to stop the Chromium CSS explode bug with an inline script.
-        console.log('Hi.')
+        console.log("%cWe aren't hiring right now, but are flattered that you are looking!\n// Digital Masterpiece", "color: white; padding: 0.5rem 0 1.25rem; font-size: 0.75rem;")
     </script>
 </head>
 

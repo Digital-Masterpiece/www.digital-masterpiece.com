@@ -1,8 +1,9 @@
 <div aria-hidden="true"
-     class="{{ .type }} flex justify-center items-center bg-gray-200 rounded shadow m-4 {{ if eq .type "desktop" }} hidden lg:flex {{ end }}">
+     class="{{ .type }} flex justify-center items-center bg-gray-700 rounded shadow-lg m-4 {{ if eq .type "desktop" }} hidden lg:flex {{ end }}">
 
-    <div class="screen flex flex-col justify-start items-start bg-gray-100 relative border border-gray-700 overflow-hidden">
-        <div class="flex flex-shrink-0 flex-col justify-center items-center w-full h-3 {{ if eq .service "webapp" }} bg-red-800 {{ else }} bg-gray-700 {{ end }}">
+    <div class="screen flex flex-col justify-start items-start bg-gray-100 relative overflow-hidden">
+        <div class="absolute glare z-10 top-0 right-0 bottom-0 left-0"></div>
+        <div class="flex flex-shrink-0 flex-col justify-center items-center w-full h-3 {{ if eq .service "webapp" }} bg-red-800 {{ else }} bg-gray-600 {{ end }}">
             {{ if eq .type "desktop" }}
                 <div class="flex justify-between items-center mx-auto w-1/2 p-1">
                     <div class="bg-white w-5 h-1 mr-auto"></div>

@@ -1,0 +1,26 @@
+<section aria-label="Hero" class="p-8 lg:p-16">
+    {{ $main := resources.Get "images/main.svg" | resources.Fingerprint }}
+    <img src="{{ $main.Permalink }}" alt="Digital Masterpiece Logo" class="hero-image w-full max-w-lg mx-auto mb-4"/>
+
+    <h2 class="m-0">
+        <span class="block text-3xl mb-2 lg:text-4xl">Fast, Beautiful, Accessible Solutions</span>
+        <span class="block text-lg lg:text-2xl">carefully curated to meet your business needs</span>
+    </h2>
+    <div>
+        {{ partial "button-link.html" (dict "link" "/request-a-quote" "color" "white" "text" "Request a Quote")}}
+        <a href="/about" class="
+            text-lg
+            inline-block
+            p-3
+            shadow
+            m-2
+            transition duration-200 ease-linear
+            yellow-button bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400
+            rounded
+            text-black
+            leading-none">
+            <span aria-hidden="true">Learn More</span>
+            <span class="sr-only">Learn more about Digital Masterpiece LLC and the services we provide.</span>
+        </a>
+    </div>
+</section>

@@ -5,4 +5,6 @@ date: 2020-03-29T11:49:48-04:00
 draft: false
 ---
 
-{{< hero >}}
+{{< sections/hero >}}
+{{< sections/websites >}}
+{{< sections/webapps >}}

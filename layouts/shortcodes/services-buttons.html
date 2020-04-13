@@ -1,24 +1,4 @@
-<div class="wrapping centered services container">
-    <a href="/websites" class="red-button
-inline-block
-p-3
-shadow
-m-2 mt-6
-transition duration-200 ease-linear
-bg-red-700 hover:bg-red-600
-text-white
-rounded
-text-black
-leading-none">Website Development</a>
-    <a href="/web-applications" class="blue-button
-inline-block
-p-3
-shadow
-m-2 mt-6
-transition duration-200 ease-linear
-bg-blue-700 hover:bg-blue-600
-text-white
-rounded
-text-black
-leading-none">Web Application Development</a>
+<div>
+    {{ partial "button-link.html" (dict "link" "/websites" "color" "red" "text" "Website Pricing")}}
+    {{ partial "button-link.html" (dict "link" "/web-applications" "color" "blue" "text" "Web Application Pricing")}}
 </div>

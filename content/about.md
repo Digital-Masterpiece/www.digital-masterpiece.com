@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "We are a remote Web Development company in the United States that specializes in custom website and web application development."
+description: "We are a remote company based in the United States that specializes in creating and maintaining completely custom websites and web applications."
 date: 2020-03-29T11:49:58-04:00
 draft: false
 ---
@@ -9,7 +9,7 @@ draft: false
 
 # About Digital Masterpiece
 
-We are a remote Web Development company in the United States that specializes in custom website and web application development.
+We are a development company based in the United States that specializes in creating and maintaining completely custom websites and web applications.
 
 {{< services-buttons >}}
 
