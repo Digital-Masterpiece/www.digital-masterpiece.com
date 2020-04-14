@@ -15,7 +15,7 @@ draft: false
 
 We create [JAMStack](https://jamstack.org/) sites that will get your potential clients what they need to make an informed decision.
 
-{{< quote-button >}}
+{{< contact-button >}}
 
 ## Cost Factors
 

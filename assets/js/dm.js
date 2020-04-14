@@ -1,7 +1,7 @@
 function initializeRecaptcha() {
     grecaptcha.ready(function () {
         grecaptcha.execute('6LfpSOgUAAAAANUxQLx28jWpKp19nT0pV08kUCRq', {action: 'homepage'}).then(function (token) {
-            if (document.getElementById('quote-form')) {
+            if (document.getElementById('contact-form')) {
                 document.getElementById('token').value = token;
             }
         });
@@ -19,7 +19,7 @@ function lockScrolling() {
     }
 }
 
-// Quote Form
+// Contact Form
 function submitForm(event) {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -34,8 +34,8 @@ function submitForm(event) {
     ]);
 
     if (name && email) {
-        const url = document.getElementById("quote-form").action + "?" + params.toString();
-        const errorMessage = "We're sorry, there was an error sending your request.\nPlease email us directly at quote@digital-masterpiece.com.";
+        const url = document.getElementById("contact-form").action + "?" + params.toString();
+        const errorMessage = "We're sorry, there was an error sending your request.\nPlease email us directly at contact@digital-masterpiece.com.";
         document.getElementById("submit-button").textContent = "Sending!";
         fetch(url, {
             method: "POST",

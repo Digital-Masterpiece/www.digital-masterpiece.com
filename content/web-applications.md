@@ -15,7 +15,7 @@ draft: false
 
 Streamlining your workflow in a digital manner is the [best](https://digitalmarketinginstitute.com/en-us/blog/what-is-the-cost-of-not-going-digital-for-a-business) decision you can make for your business and employees.
 
-{{< quote-button >}}
+{{< contact-button >}}
 
 ## Cost Factors
 
