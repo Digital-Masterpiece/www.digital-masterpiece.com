@@ -1,1 +1,1 @@
-![CI](https://github.com/nfrostdev/www.digital-masterpiece.com/workflows/CI/badge.svg)
+# www.digital-masterpiece.com

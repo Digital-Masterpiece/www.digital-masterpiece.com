@@ -1,11 +1,11 @@
 # https://www.jacobtomlinson.co.uk/posts/2020/testing-static-sites-with-lighthouse-ci-and-github-actions/
-name: CI
+name: Continuous Integration & Deployment
 on:
   push:
     branches:
       - 'master'
 jobs:
-  CI:
+  Lighthouse Audit & Firebase Deployment:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -27,7 +27,7 @@ jobs:
           urls: |
             http://localhost:1313/
             http://localhost:1313/about
-            http://localhost:1313/request-a-quote
+            http://localhost:1313/contact
             http://localhost:1313/thank-you
             http://localhost:1313/web-applications
             http://localhost:1313/websites
