@@ -1,11 +1,11 @@
 # https://www.jacobtomlinson.co.uk/posts/2020/testing-static-sites-with-lighthouse-ci-and-github-actions/
-name: Continuous Integration & Deployment
+name: Lighthouse Audit & Firebase Deployment
 on:
   push:
     branches:
       - 'master'
 jobs:
-  Lighthouse Audit & Firebase Deployment:
+  CICD:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
