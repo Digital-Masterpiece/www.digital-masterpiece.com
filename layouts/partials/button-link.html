@@ -4,18 +4,19 @@ w-auto
 p-3
 shadow-lg
 mx-2 mt-6
+outline-none
 transition duration-200 ease-linear
 {{ if eq .color "blue" }}
-blue-button bg-blue-700 hover:bg-blue-600
+blue-button bg-blue-700 hover:bg-blue-600 focus:bg-blue-600
 text-white
 {{ else if eq .color "red" }}
-red-button bg-red-700 hover:bg-red-600
+red-button bg-red-700 hover:bg-red-600 focus:bg-red-600
 text-white
 {{ else if eq .color "white" }}
 white-button bg-gray-100 hover:bg-white focus:bg-white
 text-black
 {{ else if eq .color "yellow" }}
-red-button bg-red-700 hover:bg-red-600
+yellow-button bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400
 text-black
 {{ end }}
 rounded
