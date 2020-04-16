@@ -26,13 +26,14 @@ jobs:
           runs: 1
           urls: |
             http://localhost:1313/
-            http://localhost:1313/about
-            http://localhost:1313/contact
-            http://localhost:1313/thank-you
-            http://localhost:1313/web-applications
-            http://localhost:1313/websites
-            http://localhost:1313/privacy-policy
-            http://localhost:1313/terms-and-conditions
+            http://localhost:1313/about/
+            http://localhost:1313/contact/
+            http://localhost:1313/thank-you/
+            http://localhost:1313/services/
+            http://localhost:1313/services/web-applications/
+            http://localhost:1313/services/websites/
+            http://localhost:1313/privacy-policy/
+            http://localhost:1313/terms-and-conditions/
       - name: Build Site
         run: hugo --minify
       - name: Deploy to Firebase
