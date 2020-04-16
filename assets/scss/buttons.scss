@@ -1,6 +1,6 @@
 .white-button {
   &:hover {
-    box-shadow: 0 0 1rem 0 rgba(white, 0.5);
+    box-shadow: 0 0 0.5rem 0 rgba(white, 0.5);
   }
   &:focus {
     box-shadow: 0 0 0 0.25rem rgba(white, 0.5);
@@ -9,7 +9,7 @@
 
 .yellow-button {
   &:hover {
-    box-shadow: 0 0 1rem 0 rgba(#f6e05e, 0.5);
+    box-shadow: 0 0 0.5rem 0 rgba(#f6e05e, 0.5);
   }
   &:focus {
     box-shadow: 0 0 0 0.25rem rgba(#f6e05e, 0.5);
@@ -19,7 +19,7 @@
 .blue-button {
   text-shadow: 0 0 0.25rem black;
   &:hover {
-    box-shadow: 0 0 1rem 0 rgba(#3182ce, 0.5);
+    box-shadow: 0 0 0.5rem 0 rgba(#3182ce, 0.5);
   }
   &:focus {
     box-shadow: 0 0 0 0.25rem rgba(#3182ce, 0.5);
@@ -29,7 +29,7 @@
 .red-button {
   text-shadow: 0 0 0.25rem black;
   &:hover {
-    box-shadow: 0 0 1rem 0 rgba(#c53030, 0.5);
+    box-shadow: 0 0 0.5rem 0 rgba(#c53030, 0.5);
   }
   &:focus {
     box-shadow: 0 0 0 0.25rem rgba(#c53030, 0.5);
