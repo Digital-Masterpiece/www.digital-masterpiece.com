@@ -46,8 +46,9 @@
         bg-gray-900 lg:bg-transparent
         navigation">
             {{ partial "header/link.html" (dict "text" "About" "link" "/about/" "current" $current ) }}
-            {{ partial "header/link.html" (dict "text" "Websites" "link" "/websites/" "current" $current) }}
-            {{ partial "header/link.html" (dict "text" "Web Applications" "link" "/web-applications/" "current" $current) }}
+            {{ partial "header/link.html" (dict "text" "Services" "link" "/services/" "current" $current ) }}
+            {{/* partial "header/link.html" (dict "text" "Websites" "link" "/websites/" "current" $current) */}}
+            {{/* partial "header/link.html" (dict "text" "Web Applications" "link" "/web-applications/" "current" $current) */}}
             {{/* partial "header/link.html" (dict "text" "Clients" "link" "/clients/" "current" $current) */}}
             {{ partial "header/link.html" (dict "text" "Contact Us" "link" "/contact/" "current" $current) }}
         </nav>

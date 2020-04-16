@@ -1,17 +1,15 @@
 ---
-title: "Websites"
+title: "Website Pricing"
 description: "Get a beautiful, fast, and accessible website from Digital Masterpiece."
-date: 2020-03-30T22:49:27-04:00
+date: 2020-04-16 13:56:09-04:00
 draft: false
 ---
 
 {{< drawings/service-types >}}
 
-# Website Development
+# Website Pricing
 
 **Typical Price Range: $2,000 - $25,000**
-
-## We conceptualize, develop, deploy, and host websites.
 
 We create [JAMStack](https://jamstack.org/) sites that will get your potential clients what they need to make an informed decision.
 
@@ -28,4 +26,4 @@ We create [JAMStack](https://jamstack.org/) sites that will get your potential c
 ## Recurring Cost Factors
 
 - Hosting
-- Frequency of content updates with no CMS.
+- Content updates with no CMS.
