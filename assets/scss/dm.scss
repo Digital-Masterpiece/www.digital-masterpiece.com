@@ -49,7 +49,19 @@ h2 {
 }
 
 ul, ol {
-  @extend .list-disc, .text-left;
+  @extend .text-left, .max-w-lg, .pl-6, .my-2;
+}
+
+ul {
+  @extend .list-disc;
+}
+
+ol {
+  @extend .list-decimal;
+}
+
+li {
+  @extend .my-1;
 }
 
 p {
@@ -89,5 +101,11 @@ textarea {
     &:last-child {
       background: linear-gradient(to left, transparent, rgba(white, 0.5));
     }
+  }
+}
+
+.policy {
+  p {
+    @extend .text-left;
   }
 }

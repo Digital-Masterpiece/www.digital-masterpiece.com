@@ -1,2 +1,7 @@
 {{ $js := resources.Get "js/dm.js" | resources.Minify | resources.Fingerprint }}
-<script async defer src="{{ $js.Permalink }}"></script>
+<script async src="{{ $js.Permalink }}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163835078-1"></script>
+{{ $analytics := resources.Get "js/analytics.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $analytics.Permalink }}"></script>
