@@ -1,7 +1,7 @@
 ---
 title: "Web Application Pricing"
 description: "Increase your productivity with a custom Web Application made by Digital Masterpiece."
-date: 2020-04-16 13:56:09-04:00
+date: 2020-04-18 23:18:35-04:00
 draft: false
 ---
 

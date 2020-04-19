@@ -1,7 +1,7 @@
 ---
 title: "Terms and Conditions"
 description: "The Terms and Conditions for www.digital-masterpiece.com."
-date: 2020-04-16T11:58:06-04:00
+date: 2020-04-18 23:18:08-04:00
 type: types/policies
 draft: false
 ---

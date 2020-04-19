@@ -1,7 +1,7 @@
 ---
 title: "Privacy"
 description: "The Privacy Policy for www.digital-masterpiece.com."
-date: 2020-04-16T11:31:17-04:00
+date: 2020-04-18 23:17:58-04:00
 type: types/policies
 draft: false
 ---
