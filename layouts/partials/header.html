@@ -1,12 +1,12 @@
 {{ $current := .Page.RelPermalink }}
 
-<header class="header">
+<header class="header bg-gray-800 shadow-lg">
     <a href="#main" class="sr-only">Skip to main content.</a>
     <div class="flex flex-row justify-center items-center
     h-full w-full lg:w-auto
     text-xl">
         <a href="/" class="flex justify-center items-center
-        p-4
+        py-4 px-6
         lg:border-b-2 border-transparent hover:border-yellow-300 focus:border-yellow-300
         transition duration-200 ease-linear
         {{ if eq $current "/" }}border-yellow-500{{ end }}
@@ -47,8 +47,6 @@
         navigation">
             {{ partial "header/link.html" (dict "text" "About" "link" "/about/" "current" $current ) }}
             {{ partial "header/link.html" (dict "text" "Services" "link" "/services/" "current" $current ) }}
-            {{/* partial "header/link.html" (dict "text" "Websites" "link" "/websites/" "current" $current) */}}
-            {{/* partial "header/link.html" (dict "text" "Web Applications" "link" "/web-applications/" "current" $current) */}}
             {{/* partial "header/link.html" (dict "text" "Clients" "link" "/clients/" "current" $current) */}}
             {{ partial "header/link.html" (dict "text" "Contact Us" "link" "/contact/" "current" $current) }}
         </nav>

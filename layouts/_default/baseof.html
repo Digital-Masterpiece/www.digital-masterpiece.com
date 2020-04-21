@@ -12,12 +12,12 @@
     <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}"/>
 
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"/>
     </noscript>
     <script>
         let fonts = document.createElement('link');
         fonts.rel = "stylesheet";
-        fonts.href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap";
+        fonts.href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap";
         document.head.appendChild(fonts);
     </script>
 
@@ -32,14 +32,16 @@
     {{ end }}
     <script>
         // This exists only to stop the Chromium CSS explode bug with an inline script.
-        console.log("We aren't hiring right now, but are flattered that you are looking!\n\n// Digital Masterpiece")
+        console.log("We aren't hiring right now, but are flattered that you are looking!")
+        console.log("// Digital Masterpiece")
     </script>
 </head>
 
 <body class="flex flex-col text-white">
 {{ partial "header.html" . }}
 
-<main id="main" class="flex flex-col flex-grow justify-start items-center text-center flex-grow z-10 {{ if ne .Page.RelPermalink "/" }}p-8 pt-16 text-lg{{ end }}">
+<main id="main"
+      class="flex flex-col flex-grow justify-start items-center text-center flex-grow z-10 {{ if ne .Page.RelPermalink "/" }}px-8 py-16 text-lg{{ end }}">
     {{ block "main" . }}{{ end }}
 </main>
 

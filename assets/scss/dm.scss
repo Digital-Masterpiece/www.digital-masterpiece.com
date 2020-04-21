@@ -78,8 +78,12 @@ textarea {
   resize: none;
 }
 
-.header {
-  background-color: rgba(0, 0, 0, 0.5);
+.svg-shadow {
+  filter: drop-shadow(0 0 0.125rem rgba(black, 0.5));
+
+  &:hover, &:focus {
+    filter: drop-shadow(0 0 0.125rem rgba(#f6e05e, 0.5));
+  }
 }
 
 .hero-image {
