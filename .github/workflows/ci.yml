@@ -16,24 +16,22 @@ jobs:
           extended: true
       - name: Install NPM Dependencies
         run: npm install
-      - name: Serve Site
-        run: hugo server --environment=production --baseURL=http://localhost:1313 &
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v2
         with:
           configPath: "./.github/config/lighthouserc.json"
           temporaryPublicStorage: true
-          runs: 1
+          runs: 2
           urls: |
-            http://localhost:1313/
-            http://localhost:1313/about/
-            http://localhost:1313/contact/
-            http://localhost:1313/thank-you/
-            http://localhost:1313/services/
-            http://localhost:1313/services/web-applications/
-            http://localhost:1313/services/websites/
-            http://localhost:1313/privacy-policy/
-            http://localhost:1313/terms-and-conditions/
+            https://www.digital-masterpiece.com/
+            https://www.digital-masterpiece.com/about/
+            https://www.digital-masterpiece.com/contact/
+            https://www.digital-masterpiece.com/thank-you/
+            https://www.digital-masterpiece.com/services/
+            https://www.digital-masterpiece.com/services/web-applications/
+            https://www.digital-masterpiece.com/services/websites/
+            https://www.digital-masterpiece.com/privacy-policy/
+            https://www.digital-masterpiece.com/terms-and-conditions/
       - name: Build Site
         run: hugo --minify
       - name: Deploy to Firebase
