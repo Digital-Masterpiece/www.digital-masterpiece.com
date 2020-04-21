@@ -1,10 +1,10 @@
 {{ $js := resources.Get "js/dm.js" | resources.Minify | resources.Fingerprint }}
-<script async src="{{ $js.Permalink }}"></script>
+<script defer src="{{ $js.Permalink }}"></script>
 
 {{/* Render the Analytics tag if this is a production build. */}}
 {{ if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163835078-1"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-163835078-1"></script>
     {{ $analytics := resources.Get "js/analytics.js" | resources.Minify | resources.Fingerprint }}
     <script defer src="{{ $analytics.Permalink }}"></script>
 {{ end }}
