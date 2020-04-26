@@ -1,23 +1,22 @@
-<a href="{{ .link }}" class="inline-block
-text-lg
-w-auto
-p-3
-shadow-lg
-mx-2 mt-6
-outline-none
-transition duration-200 ease-linear
-{{ if eq .color "blue" }}
-blue-button bg-blue-700 hover:bg-blue-600 focus:bg-blue-600
-text-white
-{{ else if eq .color "red" }}
-red-button bg-red-700 hover:bg-red-700 focus:bg-red-700
-text-white
-{{ else if eq .color "white" }}
-white-button bg-gray-100 hover:bg-white focus:bg-white
-text-black
-{{ else if eq .color "yellow" }}
-yellow-button bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400
-text-black
-{{ end }}
-rounded
-leading-none">{{ .text }}</a>
+<a href="{{ .link }}"
+   class="inline-block
+    text-lg
+    w-auto
+    p-3
+    shadow-md
+    mx-2 mt-6
+    outline-none
+    text-black
+    transition duration-500 ease-in-out
+    {{ if eq .color "yellow" }}
+        bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400
+    {{ else }}
+        bg-gray-200 hover:bg-white focus:bg-white
+    {{ end }}
+    rounded
+    leading-none">
+    <span>{{ .text }}</span>
+    {{ if ne .sr_only nil }}
+        <span class="sr-only">{{ .sr_only }}</span>
+    {{ end }}
+</a>

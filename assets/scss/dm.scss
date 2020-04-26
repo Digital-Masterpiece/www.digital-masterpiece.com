@@ -1,7 +1,6 @@
 @import "tailwind.min";
 @import "header";
 @import "mobile-navigation";
-@import "buttons";
 @import "display-types";
 
 .sr-only {
@@ -24,8 +23,7 @@ html, body {
 
 html {
   font-family: "Quicksand", sans-serif;
-  //background-image: url("/images/binding_dark.png");
-  background-color: #141519;
+  background-color: #111;
 
   @media (min-width: 1921px) {
     font-size: 24px;
