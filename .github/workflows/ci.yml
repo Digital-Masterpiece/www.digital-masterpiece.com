@@ -18,6 +18,9 @@ jobs:
         run: npm install
       - name: Build Site
         run: hugo --minify
+      - name: Minify SVGs
+        uses: actions/setup-node@master
+        run: npm install -g svgo && svgo -r ./public
       - name: Deploy to Firebase
         uses: lowply/deploy-firebase@v0.0.2
         env:
