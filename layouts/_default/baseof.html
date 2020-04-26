@@ -7,23 +7,12 @@
     <meta name="description" content="{{ .Description }}"/>
 
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <title>{{ .Title }} - {{ .Site.Title }}</title>
 
     {{ $favicon := resources.Get "images/favicon.png" | resources.Fingerprint }}
     <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}"/>
-
-    <noscript>
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"/>
-    </noscript>
-    <script>
-        let fonts = document.createElement('link');
-        fonts.rel = "stylesheet";
-        fonts.href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap";
-        document.head.appendChild(fonts);
-    </script>
 
     {{ $options := dict "targetPath" "css/dm.css" }}
     {{ $scss := resources.Get "scss/dm.scss" | toCSS $options }}
