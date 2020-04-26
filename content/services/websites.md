@@ -1,7 +1,7 @@
 ---
 title: "Website Pricing"
 description: "Get a beautiful, fast, and accessible website from Digital Masterpiece."
-date: 2020-04-18 23:18:43-04:00
+date: 2020-04-25 20:45:03-04:00
 draft: false
 ---
 
