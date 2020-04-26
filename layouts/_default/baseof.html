@@ -11,7 +11,7 @@
 
     <title>{{ .Title }} - {{ .Site.Title }}</title>
 
-    {{ $favicon := resources.Get "images/favicon.png" | resources.Fingerprint }}
+    {{ $favicon := resources.Get "images/favicon.png" | minify | fingerprint }}
     <link rel="icon" type="image/png" href="{{ $favicon.Permalink }}"/>
 
     {{ $options := dict "targetPath" "css/dm.css" }}
