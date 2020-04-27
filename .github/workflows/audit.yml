@@ -1,0 +1,24 @@
+name: Nightly Firebase Audit
+on:
+  schedule:
+    - cron:  '0 2 * * *'
+jobs:
+  Audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          configPath: "./.github/config/lighthouserc.json"
+          temporaryPublicStorage: true
+          runs: 1
+          urls: |
+            https://www.digital-masterpiece.com/
+            https://www.digital-masterpiece.com/about/
+            https://www.digital-masterpiece.com/contact/
+            https://www.digital-masterpiece.com/thank-you/
+            https://www.digital-masterpiece.com/services/
+            https://www.digital-masterpiece.com/services/web-applications/
+            https://www.digital-masterpiece.com/services/websites/
+            https://www.digital-masterpiece.com/privacy-policy/
+            https://www.digital-masterpiece.com/terms-and-conditions/
