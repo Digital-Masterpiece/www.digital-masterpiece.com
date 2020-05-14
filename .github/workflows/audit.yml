@@ -1,4 +1,4 @@
-name: Nightly Firebase Audit
+name: Nightly Lighthouse Audit
 on:
   schedule:
     - cron:  '0 2 * * *'
