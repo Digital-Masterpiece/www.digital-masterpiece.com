@@ -1,27 +1,36 @@
 {
   "name": "www.digital-masterpiece.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
-    "autoprefixer": "^9.7.6",
-    "cssnano": "^4.1.10",
-    "postcss-cli": "^7.1.0",
-    "purgecss": "^2.1.2"
-  },
-  "devDependencies": {},
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nfrostdev/www.digital-masterpiece.com.git"
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nfrostdev/www.digital-masterpiece.com/issues"
-  },
-  "homepage": "https://github.com/nfrostdev/www.digital-masterpiece.com#readme"
+  "devDependencies": {
+    "@nuxt/types": "^2.14.6",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-config-typescript": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "@vue/test-utils": "^1.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.5.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "jest": "^26.5.0",
+    "ts-jest": "^26.4.1",
+    "vue-jest": "^3.0.4"
+  }
 }

@@ -1,9 +1,0 @@
-{{/* https://discourse.gohugo.io/t/define-404-page-content-in-an-md-file-under-the-content-directory/13943/22*/}}
-{{ define "main" }}
-    <h1>404</h1>
-    <a href="/" class="white shadowed glowing button">Return Home</a>
-    <script>
-        document.title = "404 - " + "{{ .Site.Title }}";
-        document.querySelector('meta[name=description]').setAttribute('content', "Page not found.");
-    </script>
-{{ end }}
