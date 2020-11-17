@@ -1,0 +1,30 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/home/nick/Projects/digital-masterpiece/www.digital-masterpiece.com/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_a587e1b4"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/home/nick/Projects/digital-masterpiece/www.digital-masterpiece.com/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_50f1b1f9"
+  },
+  {
+    "name": "services",
+    "path": "/services",
+    "component": "/home/nick/Projects/digital-masterpiece/www.digital-masterpiece.com/pages/services.vue",
+    "chunkName": "pages/services",
+    "_name": "_cb8a3e56"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/nick/Projects/digital-masterpiece/www.digital-masterpiece.com/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_66182c2a"
+  }
+]
