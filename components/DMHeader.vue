@@ -4,12 +4,15 @@
       <Logo/>
     </nuxt-link>
 
-    <span class="mobile-toggle">
+    <button class="mobile-toggle"
+            aria-label="Toggle the mobile navigation."
+            @click="navOpen = !navOpen"
+            :class="{'mobile-toggle--open': navOpen}">
       <span class="mobile-toggle__bar"></span>
       <span class="mobile-toggle__bar"></span>
-    </span>
+    </button>
 
-    <nav aria-label="Primary" class="header__nav">
+    <nav aria-label="Primary" class="header__nav" :class="{'header__nav--open': navOpen}" @click="navOpen = false">
       <nuxt-link to="/about" class="header__link">About</nuxt-link>
       <nuxt-link to="/services" class="header__link">Services</nuxt-link>
       <nuxt-link to="/contact" class="header__link">Contact Us</nuxt-link>
@@ -21,16 +24,52 @@
 import Logo from "~/components/Logo";
 
 export default {
-  components: {Logo}
+  components: {Logo},
+  data() {
+    return {
+      navOpen: false
+    }
+  },
+  methods: {
+    closeNav() {
+      this.navOpen = false;
+    }
+  },
+  mounted() {
+    window.onscroll = () => this.closeNav();
+    document.querySelector('#main').onclick = () => this.closeNav();
+  }
 }
 </script>
 
 <style lang="scss">
 .mobile-toggle {
-  @apply flex flex-col cursor-pointer p-6;
+  @apply flex flex-col justify-center items-center cursor-pointer p-6 relative mr-4;
 
   &__bar {
-    @apply w-8 h-1 bg-white my-1 rounded;
+    @apply w-8 h-1 bg-white rounded transition-all duration-300 ease-in-out absolute;
+
+    &:nth-child(1) {
+      @apply mb-3;
+    }
+
+    &:nth-child(2) {
+      @apply mt-3;
+    }
+  }
+
+  &--open {
+    .mobile-toggle__bar {
+      @apply bg-yellow-400 m-0;
+
+      &:nth-child(1) {
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-135deg);
+      }
+    }
   }
 }
 
@@ -38,8 +77,12 @@ export default {
   @apply w-full flex justify-center items-center bg-black text-lg w-full h-20;
 
   &__nav {
-    @apply fixed flex flex-col justify-center items-end top-0 right-0 w-full mt-20;
-    background-color: rgba(0, 0, 0, 0.75)
+    @apply fixed flex flex-col justify-center items-end top-0 right-0 w-full mt-20 opacity-0 transition duration-300 ease-in-out pointer-events-none;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    &--open {
+      @apply opacity-100 pointer-events-auto;
+    }
   }
 
   &__link {

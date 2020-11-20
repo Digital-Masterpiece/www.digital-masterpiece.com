@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div>
     <DMHeader/>
     <main id="main" class="main">
       <Nuxt/>
@@ -19,5 +19,9 @@ export default {
 html {
   font-family: 'Quicksand', sans-serif;
   @apply bg-gray-900 text-white;
+}
+
+.main {
+  @apply p-8;
 }
 </style>
