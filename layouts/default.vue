@@ -2,7 +2,9 @@
   <div>
     <DMHeader/>
     <main id="main" class="main">
-      <Nuxt/>
+      <div class="main__container">
+        <Nuxt/>
+      </div>
     </main>
   </div>
 </template>
@@ -15,13 +17,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   font-family: 'Quicksand', sans-serif;
   @apply bg-gray-900 text-white;
 }
 
 .main {
-  @apply p-8;
+  @apply flex flex-col justify-center items-center p-8;
+
+  &__container {
+    @apply max-w-5xl w-full;
+
+    @media (min-width: 64em) {
+      @apply px-6;
+    }
+  }
 }
 </style>
