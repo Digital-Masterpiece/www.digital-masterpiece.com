@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is the about page.
+    <p>This is the about page.</p>
   </div>
 </template>
 

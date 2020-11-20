@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is the services page.
+    <p>This is the services page.</p>
   </div>
 </template>
 

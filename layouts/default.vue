@@ -23,8 +23,8 @@ html {
   @apply bg-gray-900 text-white;
 }
 
-p {
-  @apply mb-4;
+p, ul, ol {
+  @apply mb-4 mx-auto max-w-xl;
 }
 
 .main {
