@@ -23,6 +23,10 @@ html {
   @apply bg-gray-900 text-white;
 }
 
+p {
+  @apply mb-4;
+}
+
 .main {
   @apply flex flex-col justify-center items-center p-8;
 
@@ -34,4 +38,9 @@ html {
     }
   }
 }
+
+// Transitions
+.fade-enter-active, .fade-leave-active { transition: all 0.3s linear; }
+.fade-enter { transform: translateY(-1rem) }
+.fade-enter, .fade-leave-active { opacity: 0; }
 </style>
