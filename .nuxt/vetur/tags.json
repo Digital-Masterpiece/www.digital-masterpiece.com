@@ -5,6 +5,12 @@
   "LazyDmHeader": {
     "description": "Auto imported from components/DMHeader.vue"
   },
+  "Icon": {
+    "description": "Auto imported from components/Icon.vue"
+  },
+  "LazyIcon": {
+    "description": "Auto imported from components/Icon.vue"
+  },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
