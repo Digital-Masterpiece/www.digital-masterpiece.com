@@ -1,16 +1,20 @@
 {{ define "main" }}
     <div class="cta">
-        <h1 class="cta__h1">Fast, Beautiful, & Accessible Digital Solutions</h1>
-        <h2 class="cta__h2">carefully curated to meet your business needs</h2>
+        <div class="cta__content">
+            <h1 class="cta__content__h1">Fast, Beautiful, & Accessible Digital Solutions</h1>
+            <h2 class="cta__content__h2">carefully curated to meet your business needs</h2>
+        </div>
         {{ $bg := resources.Get "images/dm_background.jpg" | resources.Fingerprint }}
         <img class="cta__image" src="{{ $bg.RelPermalink }}" alt="Computer setup in white room."/>
     </div>
     <script>
-        function sizeCTAImage() {
-            const image = document.querySelector('.cta__image');
+        function sizeCTA() {
+            const image = document.querySelector('.cta');
             image.style.height = window.innerHeight.toString() + 'px';
         }
-        sizeCTAImage()
+
+        window.addEventListener('load', sizeCTA)
+        window.addEventListener('resize', sizeCTA)
     </script>
     {{ .Content }}
 {{ end }}

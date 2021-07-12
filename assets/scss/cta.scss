@@ -1,7 +1,26 @@
 .cta {
+  @apply absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center;
+  z-index: 1;
+
+  &__content {
+    @apply relative p-6 text-center bg-gray-50 bg-opacity-75 shadow w-full;
+    backdrop-filter: blur(0.25rem);
+
+    &__h1 {
+      @apply text-2xl mb-3;
+      @apply sm:text-3xl;
+      @apply lg:text-4xl;
+    }
+
+    &__h2 {
+      @apply text-sm;
+      @apply sm:text-base;
+      @apply md:text-lg;
+    }
+  }
 
   &__image {
-    @apply absolute top-0 right-0 bottom-0 left-0 object-cover w-full;
+    @apply absolute object-cover w-full h-full;
     z-index: 0;
   }
 }
