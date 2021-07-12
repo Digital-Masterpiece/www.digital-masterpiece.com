@@ -4,7 +4,3 @@ description: "Fast, Beautiful, Accessible Solutions, carefully curated to meet y
 date: 2020-04-25 20:45:03-04:00
 draft: false
 ---
-
-{{< sections/hero >}}
-{{< sections/websites >}}
-{{< sections/webapps >}}

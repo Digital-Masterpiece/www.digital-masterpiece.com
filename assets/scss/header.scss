@@ -1,5 +1,5 @@
 .header {
-  @apply flex justify-center items-center;
+  @apply relative z-20 flex justify-center items-center;
   font-family: "Quicksand", sans-serif;
 
   &__container {
