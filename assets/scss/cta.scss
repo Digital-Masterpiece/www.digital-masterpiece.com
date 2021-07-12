@@ -1,9 +1,9 @@
 .cta {
-  @apply absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center;
+  @apply absolute top-0 right-0 bottom-0 left-0 flex flex-col justify-center items-center;
   z-index: 1;
 
   &__content {
-    @apply relative p-6 text-center bg-gray-50 bg-opacity-75 shadow w-full;
+    @apply relative p-6 text-center bg-gray-50 bg-opacity-75 shadow w-full mb-6;
     backdrop-filter: blur(0.25rem);
 
     &__h1 {
@@ -16,6 +16,15 @@
       @apply text-sm;
       @apply sm:text-base;
       @apply md:text-lg;
+    }
+  }
+
+  &__button {
+    @apply px-6 py-4 rounded shadow bg-green-800 text-white text-lg transition-all duration-200 ease-in-out;
+
+    &:hover, &:focus {
+      @apply shadow-lg bg-green-700;
+      transform: scale(1.05);
     }
   }
 

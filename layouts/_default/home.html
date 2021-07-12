@@ -1,12 +1,13 @@
 {{ define "main" }}
-    <div class="cta">
+    <section aria-label="Call to Action" class="cta">
         <div class="cta__content">
             <h1 class="cta__content__h1">Fast, Beautiful, & Accessible Digital Solutions</h1>
             <h2 class="cta__content__h2">carefully curated to meet your business needs</h2>
         </div>
+        <a href="/contact" class="cta__button">Request a Quote</a>
         {{ $bg := resources.Get "images/dm_background.jpg" | resources.Fingerprint }}
         <img class="cta__image" src="{{ $bg.RelPermalink }}" alt="Computer setup in white room."/>
-    </div>
+    </section>
     <script>
         function sizeCTA() {
             const image = document.querySelector('.cta');
