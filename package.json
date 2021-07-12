@@ -1,27 +1,27 @@
 {
   "name": "www.digital-masterpiece.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "package.json",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
-    "autoprefixer": "^9.7.6",
-    "cssnano": "^4.1.10",
-    "postcss-cli": "^7.1.0",
-    "purgecss": "^2.1.2"
+    "postcss-cli": "^8.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nfrostdev/www.digital-masterpiece.com.git"
+    "url": "git+https://github.com/nfrostdev/nfrost.dev-hugo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nfrostdev/www.digital-masterpiece.com/issues"
+    "url": "https://github.com/nfrostdev/nfrost.dev-hugo/issues"
   },
-  "homepage": "https://github.com/nfrostdev/www.digital-masterpiece.com#readme"
+  "homepage": "https://github.com/nfrostdev/nfrost.dev-hugo#readme",
+  "description": ""
 }
