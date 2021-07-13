@@ -3,4 +3,11 @@
         <span>Modern business demands a</span>
         <span class="modern-business__swp"><strong>strong web presence.</strong></span>
     </h2>
+
+    <div class="modern-business__facts">
+        {{ partial "modern-business-fact" (dict "link" "https://www.nectafy.com/blog/mobile-marketing-trends-mash-up" "percent" "88" "text" "of consumers who search for a business on a mobile device call or go to that business within 24 hours.") }}
+        {{ partial "modern-business-fact" (dict "link" "https://www.kinesisinc.com/the-truth-about-web-design/" "percent" "75" "text" "of consumers admit to making judgements on a company’s credibility based on the company’s website design.") }}
+        {{ partial "modern-business-fact" (dict "link" "https://www.impactbnd.com/blog/mobile-marketing-statistics" "percent" "61" "text" "of users are unlikely to return to a site on mobile if they had trouble accessing it and 40% visit a competitor’s site instead.") }}
+        {{ partial "modern-business-fact" (dict "link" "https://www.socpub.com/articles/the-5-mobile-marketing-mistakes-infographic-14849" "percent" "57" "text" "of internet users say they won’t recommend a business with a poorly designed website.") }}
+    </div>
 </div>
