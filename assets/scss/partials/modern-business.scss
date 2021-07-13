@@ -12,7 +12,7 @@
   }
 
   &__fact {
-    @apply leading-snug p-4 rounded transition-all duration-300 ease-in-out;
+    @apply leading-snug p-4 rounded-md transition-all duration-300 ease-in-out;
     width: 20rem;
 
     &:hover, &:focus {
