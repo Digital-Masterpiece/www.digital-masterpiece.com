@@ -10,7 +10,7 @@ function handleCTA() {
 
     const image = document.querySelector('.cta__image');
     if (image) {
-        image.addEventListener('g', function () {
+        image.addEventListener('load', function () {
             transitionInPage()
         })
     } else {
