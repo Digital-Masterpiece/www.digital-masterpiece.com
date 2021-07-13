@@ -12,6 +12,14 @@ h1, h2, h3, h4 {
   font-family: "Quicksand", sans-serif;
 }
 
+.body {
+  @apply opacity-0 duration-500 ease-in-out;
+
+  &.loaded {
+    @apply opacity-100;
+  }
+}
+
 .site-container {
   @apply flex justify-center items-center max-w-lg mx-auto p-6;
 }

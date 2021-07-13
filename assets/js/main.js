@@ -1,9 +1,22 @@
-function sizeCTA() {
-    const cta = document.querySelector('.cta');
+function transitionInPage() {
+    document.querySelector('.body').classList.add('loaded')
+}
+
+function handleCTA() {
+    const cta = document.querySelector('.cta')
     if (cta) {
-        cta.style.height = window.innerHeight.toString() + 'px';
+        cta.style.height = window.innerHeight.toString() + 'px'
+    }
+
+    const image = document.querySelector('.cta__image');
+    if (image) {
+        image.addEventListener('g', function () {
+            transitionInPage()
+        })
+    } else {
+        transitionInPage()
     }
 }
 
-sizeCTA();
-window.addEventListener('resize', sizeCTA)
+handleCTA()
+window.addEventListener('resize', handleCTA)
