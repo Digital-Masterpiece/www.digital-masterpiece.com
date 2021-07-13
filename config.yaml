@@ -2,5 +2,5 @@ baseURL: "https://www.digital-masterpiece.com"
 languageCode: "en-us"
 title: "Digital Masterpiece"
 canonifyURLs: true
-disableKinds: ["taxonomy", "taxonomyTerm"]
+disableKinds: [ "taxonomy", "taxonomyTerm" ]
 enableRobotsTXT: true
