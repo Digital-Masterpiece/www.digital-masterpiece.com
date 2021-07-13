@@ -1,5 +1,5 @@
 .modern-business {
-  @apply flex flex-col justify-center items-center text-center shadow-2xl px-6 py-12 text-center bg-gradient-to-br from-white to-gray-300;
+  @apply flex flex-col justify-center items-center text-center shadow-2xl px-6 py-12 text-center bg-gradient-to-br from-gray-50 to-gray-200;
 
   &__h2 {
     @apply flex flex-col justify-center items-center text-lg;
@@ -12,14 +12,20 @@
   }
 
   &__fact {
-    @apply leading-snug w-72;
+    @apply leading-snug p-4 rounded transition-all duration-300 ease-in-out;
+    width: 20rem;
+
+    &:hover, &:focus {
+      @apply shadow-md bg-white;
+      transform: scale(1.05);
+    }
 
     &s {
-      @apply grid gap-12 my-12 justify-center items-start;
+      @apply grid gap-8 mt-12 mb-4 justify-center items-start;
       @apply lg:grid-cols-2;
     }
 
-    &__link {
+    &__percent {
       @apply block text-green-800 text-7xl font-bold mb-2;
     }
   }
