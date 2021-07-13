@@ -1,0 +1,11 @@
+.modern-business {
+  @apply text-center shadow-2xl p-6;
+
+  &__h2 {
+    @apply flex flex-col justify-center items-center text-lg;
+  }
+
+  &__swp {
+    @apply text-2xl;
+  }
+}
