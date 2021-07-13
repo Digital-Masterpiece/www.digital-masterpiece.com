@@ -1,0 +1,34 @@
+<section aria-label="Call to Action" class="cta">
+    <div class="cta__content">
+        <h1 class="cta__content__h1">Fast, Beautiful, & Accessible Digital Solutions</h1>
+        <h2 class="cta__content__h2">carefully curated to meet your business needs</h2>
+    </div>
+
+    <a href="/contact" class="cta__button">Request a Quote</a>
+    {{ $bg := resources.Get "images/dm_background3.jpg" | resources.Fingerprint }}
+    {{ $sm := $bg.Resize "480x webp q75" }}
+    {{ $md := $bg.Resize "640x webp q75" }}
+    {{ $lg := $bg.Resize "1024x webp q75" }}
+    {{ $xl := $bg.Resize "1440x webp q75" }}
+    {{ $xxl := $bg.Resize "1920x webp q75" }}
+    {{ $xxxl := $bg.Resize "2560x webp q75" }}
+    {{ $xxxxl := $bg.Resize "3840x webp q75" }}
+
+    <img class="cta__image"
+         srcset="{{ $sm.RelPermalink }} 480w,
+                     {{ $md.RelPermalink }} 640w,
+                     {{ $lg.RelPermalink }} 1024w,
+                     {{ $xl.RelPermalink }} 1440w,
+                     {{ $xxl.RelPermalink }} 1920w,
+                     {{ $xxxl.RelPermalink }} 2560w,
+                     {{ $xxxxl.RelPermalink }} 3840w"
+         sizes="(max-width: 480px) 480px,
+                    (max-width: 640px) 640px,
+                    (max-width: 1024px) 1024px,
+                    (max-width: 1440px) 1440px,
+                    (max-width: 1920px) 1920px,
+                    (max-width: 2560px) 2560px,
+                    3840px"
+         src="{{ $xl.RelPermalink }}"
+         alt="Computer setup in white room."/>
+</section>
