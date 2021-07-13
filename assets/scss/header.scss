@@ -7,7 +7,7 @@
   }
 
   &__site-info {
-    @apply flex justify-center items-center;
+    @apply flex justify-center items-center z-40;
 
     &__logo {
       @apply h-8 w-8 shadow mr-2;
@@ -17,4 +17,35 @@
       @apply text-xl;
     }
   }
+
+  &__nav {
+    //@apply opacity-0 pointer-events-none;
+    @apply fixed top-0 right-0 bottom-0 left-0 bg-white pt-24 z-30 bg-opacity-95 flex flex-col text-center;
+    backdrop-filter: blur(1rem);
+    @apply md:relative md:bg-transparent;
+
+    &__link {
+      @apply p-4 w-full text-2xl;
+    }
+  }
+}
+
+#mobile-navigation {
+  @apply hidden;
+
+  &:checked {
+    & ~ .header__nav {
+      @apply opacity-100 pointer-events-auto;
+    }
+  }
+}
+
+.mobile-toggle {
+  @apply flex flex-col justify-center items-center w-12 h-12 cursor-pointer z-40;
+  @apply md:hidden;
+}
+
+.hamburger {
+  @apply w-8 h-1 bg-gray-900 rounded;
+  margin: 0.125rem;
 }
