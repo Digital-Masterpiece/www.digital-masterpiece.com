@@ -13,9 +13,7 @@ function handleCTA() {
     }
 
     if (image) {
-        image.addEventListener('load', function () {
-            transitionInPage()
-        })
+        setTimeout(transitionInPage, 200)
     } else {
         transitionInPage()
     }
@@ -50,3 +48,15 @@ window.addEventListener('scroll', function () {
         factsHandled = true;
     }
 })
+
+const toggle = document.getElementById('mobile-navigation');
+
+function handleMobileNavigation() {
+    if (toggle.checked) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.body.style.overflow = ''
+    }
+}
+
+toggle.addEventListener('click', handleMobileNavigation)
