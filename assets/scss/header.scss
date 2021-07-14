@@ -25,7 +25,7 @@
 
     &__container {
       @apply grid gap-6 p-6 justify-center items-start;
-      @apply md:flex md:gap-0;
+      @apply md:flex md:gap-0 md:p-0;
     }
 
     &__link {
