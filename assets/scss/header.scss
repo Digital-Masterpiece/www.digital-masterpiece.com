@@ -20,17 +20,17 @@
 
   &__nav {
     @apply opacity-0 pointer-events-none transition duration-300 ease-in-out;
-    @apply fixed top-0 right-0 bottom-0 left-0 bg-gray-200 pt-24 z-30 flex flex-col justify-start items-center text-center whitespace-nowrap;
-    @apply md:relative md:opacity-100 md:pointer-events-auto md:bg-transparent md:flex-row md:pt-0;
+    @apply fixed top-0 right-0 bottom-0 left-0 bg-gray-200 pt-24 z-30 text-center whitespace-nowrap;
+    @apply md:relative md:opacity-100 md:pointer-events-auto md:bg-transparent md:pt-0;
+
+    &__container {
+      @apply grid gap-6 p-6 justify-center items-start;
+      @apply md:flex md:gap-0;
+    }
 
     &__link {
-      @apply p-6 w-full text-3xl border-t border-gray-300 bg-white font-medium;
-      @apply md:text-lg md:bg-transparent md:border-0 md:py-0 md:px-4;
-
-      &:last-child {
-        @apply border-b;
-        @apply md:border-0;
-      }
+      @apply p-6 w-full text-3xl bg-white font-medium rounded shadow;
+      @apply md:text-lg md:bg-transparent md:py-2 md:px-4 md:shadow-none;
 
       &:hover, &:focus {
         @apply text-green-800 underline;
@@ -46,6 +46,17 @@
     & ~ .header__nav {
       @apply opacity-100 pointer-events-auto;
     }
+
+    & + .mobile-toggle {
+      .hamburger {
+        &:first-child {
+          top: 0.25rem;
+        }
+        &:last-child {
+          top: -0.25rem;
+        }
+      }
+    }
   }
 }
 
@@ -55,6 +66,16 @@
 }
 
 .hamburger {
-  @apply w-8 h-1 bg-gray-900 rounded;
-  margin: 0.125rem;
+  @apply relative w-8 h-1 bg-gray-900 rounded transition-all duration-300 ease-in-out;
+  &:first-child {
+    top: -0.25rem;
+  }
+
+  &:nth-child(2) {
+    top: 0;
+  }
+
+  &:last-child {
+    top: 0.25rem;
+  }
 }
