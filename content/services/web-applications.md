@@ -5,15 +5,11 @@ date: 2020-04-25 20:45:03-04:00
 draft: false
 ---
 
-{{< drawings/service-types service="webapp" >}}
-
 # Web Application Pricing
 
 **Typical Price Range: $30,000 - $500,000**
 
 Streamlining your workflow in a digital manner is the [best](https://digitalmarketinginstitute.com/en-us/blog/what-is-the-cost-of-not-going-digital-for-a-business) decision you can make for your business and employees.
-
-{{< contact-button >}}
 
 ## Cost Factors
 

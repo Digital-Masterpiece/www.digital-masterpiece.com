@@ -5,13 +5,9 @@ date: 2020-04-25 20:45:03-04:00
 draft: false
 ---
 
-{{< drawings/workflow >}}
-
 # Services
 
 We conceptualize, design, develop, and deploy public websites and web applications for businesses and charities.
-
-{{< services-buttons >}}
 
 ## What's the difference between a website and a web application?
 
@@ -23,5 +19,3 @@ In our simplest terms:
 They both can be built with similar technologies, but it is important to distinguish the purpose between the two.
 
 ## Have more questions? We'd be happy to help!
-
-{{< contact-button >}}

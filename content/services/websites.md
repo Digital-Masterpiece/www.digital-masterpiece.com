@@ -5,15 +5,11 @@ date: 2020-04-25 20:45:03-04:00
 draft: false
 ---
 
-{{< drawings/service-types >}}
-
 # Website Pricing
 
 **Typical Price Range: $2,000 - $25,000**
 
 We create [JAMStack](https://jamstack.org/) sites that will get your potential clients what they need to make an informed decision.
-
-{{< contact-button >}}
 
 ## Cost Factors
 
