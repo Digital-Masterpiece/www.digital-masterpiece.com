@@ -4,19 +4,13 @@ function transitionInPage() {
 
 function handleCTA() {
     const header = document.querySelector('.header')
-    const cta = document.querySelector('.cta')
-    const image = document.querySelector('.cta__image');
+    const fold = document.querySelector('.fold-content')
 
-    if (cta) {
-        // The image will be misplaced and too large for the cta container, so we have to adjust the container minus the header height.
-        cta.style.height = (window.innerHeight - header.offsetHeight).toString() + 'px'
+    if (fold) {
+        // The image will be misplaced and too large for the fold container, so we have to adjust the container minus the header height.
+        fold.style.height = (window.innerHeight - header.offsetHeight).toString() + 'px'
     }
-
-    if (image) {
-        setTimeout(transitionInPage, 200)
-    } else {
-        transitionInPage()
-    }
+    transitionInPage()
 }
 
 handleCTA()

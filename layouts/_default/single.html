@@ -1,3 +1,6 @@
 {{ define "main" }}
-    {{ .Content }}
+    {{ partial "site-background" (dict "image" "images/dm_background.jpg" "alt" "Computer setup in white room.") }}
+    <div class="fold-content">
+        {{ .Content }}
+    </div>
 {{ end }} 
