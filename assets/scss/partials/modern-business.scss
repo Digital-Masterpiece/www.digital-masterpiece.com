@@ -22,7 +22,7 @@
 
     &s {
       @apply grid gap-8 mt-12 mb-4 justify-center items-start;
-      @apply lg:grid-cols-2;
+      @apply md:grid-cols-2;
     }
 
     &__percent {

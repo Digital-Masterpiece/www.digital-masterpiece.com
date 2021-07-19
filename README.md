@@ -4,5 +4,5 @@
 # Using Firebase preview channels.
 *In your working directory.*
 ```bash
-rm -rf public && hugo --minify --baseURL='' && firebase hosting:channel:deploy YOUR_CHANNEL_NAME
+rm -rf public && hugo --minify && firebase hosting:channel:deploy YOUR_CHANNEL_NAME
 ```
