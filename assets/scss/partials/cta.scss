@@ -11,7 +11,7 @@
     }
 
     &__h2 {
-      @apply text-sm;
+      @apply text-sm font-light text-center my-0;
       @apply sm:text-base;
       @apply md:text-lg;
     }
