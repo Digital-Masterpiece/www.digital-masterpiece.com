@@ -1,4 +1,4 @@
-{{ $bg := resources.Get .image | resources.Fingerprint }}
+{{ $bg := resources.Get (.Get "location") | resources.Fingerprint }}
 {{ $sm := $bg.Resize "480x webp q75" }}
 {{ $md := $bg.Resize "640x webp q75" }}
 {{ $lg := $bg.Resize "1024x webp q75" }}
@@ -23,4 +23,4 @@
             (max-width: 2560px) 2560px,
             3840px"
      src="{{ $xl.RelPermalink }}"
-     alt="{{ .alt }}"/>
+     alt="{{ .Get "alt" }}"/>
