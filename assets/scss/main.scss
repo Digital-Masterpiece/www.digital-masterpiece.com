@@ -26,6 +26,10 @@ h2 {
 
 p {
   @apply my-2;
+
+  a {
+    @apply text-green-800 underline font-medium;
+  }
 }
 
 strong {
