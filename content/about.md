@@ -7,6 +7,8 @@ draft: false
 
 {{< logo >}}
 
+{{< card >}}
 # About Digital Masterpiece
 
 We are a web development company based in the United States that specializes in creating and maintaining completely custom websites and web applications.
+{{</ card >}}

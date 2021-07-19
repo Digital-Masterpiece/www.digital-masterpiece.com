@@ -1,6 +1,6 @@
 {{ $current := .Page.RelPermalink }}
 
-<header class="header">
+<header class="header{{ if eq .RelPermalink "/" }} home{{ end }}">
     <a href="#main" class="sr-only">Skip to main content.</a>
     <div class="header__container">
         <a href="/" class="header__site-info">

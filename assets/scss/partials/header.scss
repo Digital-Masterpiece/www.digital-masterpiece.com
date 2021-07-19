@@ -1,6 +1,11 @@
 .header {
-  @apply relative z-20 flex justify-center items-center;
+  @apply relative z-20 flex justify-center items-center bg-white bg-opacity-90 shadow;
+  backdrop-filter: blur(0.25rem);
   font-family: "Quicksand", sans-serif;
+
+  &.home {
+    @apply bg-transparent shadow-none;
+  }
 
   &__container {
     @apply flex justify-between items-center w-full max-w-3xl p-6;

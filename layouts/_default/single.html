@@ -1,6 +1,8 @@
 {{ define "main" }}
-    {{ partial "site-background" (dict "image" "images/dm_background.jpg" "alt" "Computer setup in white room.") }}
+    {{ partial "site-background" (dict "image" "images/about_background.jpg" "alt" "Computer setup in white room.") }}
     <div class="fold-content">
-        {{ .Content }}
+        <div class="site-container">
+            {{ .Content }}
+        </div>
     </div>
 {{ end }} 
