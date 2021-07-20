@@ -1,0 +1,27 @@
+.contact {
+  @apply grid gap-3 w-72;
+
+  &__field {
+    @apply relative flex flex-col justify-start items-start w-full;
+
+    label {
+      @apply absolute top-0 left-0 ml-3 mt-2 border-2 border-transparent text-xs mb-1 font-light pointer-events-none;
+    }
+
+    input, textarea {
+      @apply resize-none rounded bg-white px-3 pb-2 pt-7 w-full border-2 border-green-700 border-opacity-25 transition duration-300 ease-in-out outline-none text-sm;
+
+      &:focus {
+        @apply border-opacity-100;
+      }
+    }
+  }
+
+  &__button {
+    @apply px-6 py-4 rounded shadow bg-green-800 text-white transition-all duration-200 ease-in-out;
+
+    &:hover, &:focus {
+      @apply shadow-lg bg-green-700;
+    }
+  }
+}

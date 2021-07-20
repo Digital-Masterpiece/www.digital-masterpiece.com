@@ -1,0 +1,26 @@
+<section aria-label="Contact Us" aria-live="polite" class="card">
+    <h1>Contact Us</h1>
+    <a href="mailto:contact@digital-masterpiece.com?subject=Digital Masterpiece Inquiry">
+        contact@digital-masterpiece.com
+    </a>
+</section>
+
+<div class="card__or">or</div>
+
+<form id="contact"
+      class="contact card"
+      method="POST">
+    <div class="contact__field">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="John/Jane Doe" required/>
+    </div>
+    <div class="contact__field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="user@domain.com" required/>
+    </div>
+    <div class="contact__field">
+        <label for="message">Message (Optional)</label>
+        <textarea id="message" placeholder="My business needs a website."></textarea>
+    </div>
+    <button type="submit" class="contact__button">Submit</button>
+</form>

@@ -7,6 +7,4 @@ draft: false
 
 {{< site-background location="images/contact_bg.jpg" alt="Two pens beside Macbook." >}}
 
-# Contact Us
-
-{{< contact-form >}}
+{{< contact >}}

@@ -4,6 +4,7 @@
 @import './partials/header';
 @import './partials/footer';
 @import './partials/cta';
+@import './partials/contact';
 @import './partials/modern-business';
 @import './partials/competitive-business';
 
@@ -30,9 +31,19 @@ p {
   &:last-child {
     @apply mb-0;
   }
+}
 
+.card, p {
   a {
-    @apply text-green-800 underline font-medium;
+    @apply text-green-800 underline font-medium transition duration-200 ease-in-out;
+
+    &:hover, &:focus {
+      @apply text-green-700;
+    }
+  }
+
+  &__or {
+    @apply font-medium my-2 w-1/2 text-center;
   }
 }
 
