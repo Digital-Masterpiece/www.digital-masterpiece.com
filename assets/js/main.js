@@ -1,7 +1,3 @@
-function transitionInPage() {
-    document.querySelector('.body').classList.add('loaded')
-}
-
 function handleCTA() {
     const header = document.querySelector('.header')
     const fold = document.querySelector('.fold-content')
@@ -10,7 +6,6 @@ function handleCTA() {
         // The image will be misplaced and too large for the fold container, so we have to adjust the container minus the header height.
         fold.style.height = (window.innerHeight - header.offsetHeight).toString() + 'px'
     }
-    transitionInPage()
 }
 
 handleCTA()
