@@ -9,7 +9,7 @@
 
 <form id="contact"
       class="contact card"
-      method="POST">
+      method="GET">
     <div class="contact__field">
         <label for="name">Name</label>
         <input type="text" id="name" placeholder="John/Jane Doe" required/>
@@ -24,3 +24,42 @@
     </div>
     <button type="submit" class="contact__button">Submit</button>
 </form>
+
+<script>
+    const form = document.getElementById('contact');
+
+    function validateContactForm() {
+        const name = document.getElementById('name').value
+        const email = document.getElementById('email').value
+
+        if (!name || name.length < 2) {
+            return false
+        }
+        return !(!email || email.length < 2);
+    }
+
+    function handleContactForm() {
+        let name = document.getElementById('name').value
+        let email = document.getElementById('email').value
+        let message = document.getElementById('message').value
+        const googleInputs = {
+            'entry.663124315': name,
+            'entry.1934655303': email,
+            'entry.1793311173': message
+        }
+        let newWindow = window.open('https://docs.google.com/forms/d/e/1FAIpQLSedHcxcYtHcYKsY-VHhQDmbEQZLPbcjr5MqBab65k3uuy6sdA/formResponse?' + new URLSearchParams(googleInputs).toString())
+        setTimeout(function() {
+            newWindow.close()
+            document.getElementById('name').value = null
+            document.getElementById('email').value = null
+            document.getElementById('message').value = null
+            form.innerHTML = '<strong>Thank you! Someone will contact you as soon as possible about your inquiry.</strong>'
+        }, 500)
+    }
+
+    form.addEventListener('input', validateContactForm)
+    form.addEventListener('submit', function () {
+        event.preventDefault()
+        handleContactForm()
+    })
+</script>
